@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "id": "022",
+  "slug": "quiet-on-purpose",
+  "course": "snn",
+  "unit": "codes",
+  "order": 22,
+  "title": "Quiet on purpose",
+  "concept": "sparse",
+  "summary": "A good code leaves most buckets empty.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Spikes cost something.\nA picture of an edge should wake a few buckets, not all of them.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A code that turns every bucket on a little can still copy the picture.\nIt just spends water the picture did not need.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Silence in most buckets is a failure.",
+        "answer": false,
+        "why": "Silence is the prediction of a sparse code.",
+        "simpler": "Only the buckets that explain the picture need to tip."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What should a photo of a single edge do?",
+        "choices": [
+          "Wake a few buckets",
+          "Fill every bucket a little",
+          "Empty the buckets that match the edge"
+        ],
+        "answer": 0,
+        "why": "A few features explain the edge. The rest stay quiet.",
+        "simpler": "Cost means most of the crowd does nothing."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Should most buckets tip on a simple picture?",
+    "answer": "No. Most should stay quiet."
+  },
+  "deeper": {
+    "note": "Olshausen and Field asked a code to rebuild natural images while staying sparse. Oriented filters fell out.",
+    "paper": {
+      "title": "Emergence of simple-cell receptive field properties by learning a sparse code for natural images",
+      "authors": [
+        "Bruno A. Olshausen",
+        "David J. Field"
+      ],
+      "year": 1996,
+      "venue": "Nature",
+      "section": "The objective and the learned receptive fields.",
+      "link": "https://doi.org/10.1038/381607a0"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "most neurons stay silent",
+      "term": "sparse code",
+      "definition": "A representation that explains the input with as few active units as possible."
+    }
+  ]
+}

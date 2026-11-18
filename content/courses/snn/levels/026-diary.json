@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "id": "026",
+  "slug": "diary",
+  "course": "snn",
+  "unit": "practice",
+  "order": 26,
+  "title": "A diary of pours",
+  "concept": "bptt",
+  "summary": "To learn across time, keep a short diary, then read it backward.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Each moment of water has to be remembered\nif a later mistake is allowed to blame an early pour.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A longer diary teaches longer gaps.\nIt also costs more memory.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Throwing away the diary after every moment means…",
+        "choices": [
+          "a late mistake cannot see the first pour",
+          "the bucket leaks faster",
+          "tips get louder"
+        ],
+        "answer": 0,
+        "why": "The path backward is cut.",
+        "simpler": "No diary, no lesson across time."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Resetting the water between pictures stops one picture from leaking into the next.",
+        "answer": true,
+        "why": "Each picture deserves its own bucket.",
+        "simpler": "In snnTorch that bookkeeping is utils.reset."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Why does a longer diary cost more?",
+    "answer": "You have to store every moment until the lesson reads backward."
+  },
+  "deeper": {
+    "note": "The Python loop over time is the diary. Eshraghian and colleagues walk through it. Tutorial 5 is the companion.",
+    "paper": {
+      "title": "Training Spiking Neural Networks Using Lessons From Deep Learning",
+      "authors": [
+        "Jason K. Eshraghian",
+        "Max Ward",
+        "Emre Neftci",
+        "Xinxin Wang",
+        "Gregor Lenz",
+        "Girish Dwivedi",
+        "Mohammed Bennamoun",
+        "Doo Seok Jeong",
+        "Wei D. Lu"
+      ],
+      "year": 2023,
+      "venue": "Proceedings of the IEEE",
+      "section": "The backpropagation-through-time section. Tutorial 5: https://snntorch.readthedocs.io/en/latest/tutorials/tutorial_5.html",
+      "link": "https://arxiv.org/abs/2109.12894"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "read the moments backward",
+      "term": "backpropagation through time",
+      "definition": "Learning by storing each timestep and sending the lesson back through that unroll."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "id": "035",
+  "slug": "packets",
+  "course": "snn",
+  "unit": "machines",
+  "order": 35,
+  "title": "Tiny packets",
+  "concept": "spinnaker",
+  "summary": "The buckets are ordinary programs. The fabric carries the “I tipped” notes.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Each tip is a tiny packet: who tipped.\nWhen it arrives is the when.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The neuron model is software, so you can change it.\nThe cost is energy. This is not the thriftiest chip.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What is the specialized part?",
+        "choices": [
+          "The fabric that moves huge numbers of tiny packets",
+          "A custom ion channel",
+          "On-chip backprop"
+        ],
+        "answer": 0,
+        "why": "The cores are deliberately ordinary ARM cores.",
+        "simpler": "The 2014 paper had thousands of processors, and a million-core machine as the aim."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "An unusual neuron written in software is a natural fit here.",
+        "answer": true,
+        "why": "You change the model by changing code.",
+        "simpler": "A fixed on-chip learning microcode is the other chip’s bet."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "On SpiNNaker, is the neuron model fixed silicon or software?",
+    "answer": "Software."
+  },
+  "deeper": {
+    "note": "Furber, Galluppi, Temple, and Plana. Read the packet and the programming model. Do not promote the aim into a finished million-core result.",
+    "paper": {
+      "title": "The SpiNNaker Project",
+      "authors": [
+        "Steve B. Furber",
+        "Francesco Galluppi",
+        "Steve Temple",
+        "Luis A. Plana"
+      ],
+      "year": 2014,
+      "venue": "Proceedings of the IEEE",
+      "section": "The packet and the real-time programming model.",
+      "link": "https://doi.org/10.1109/JPROC.2014.2304638"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a spike as a tiny message",
+      "term": "address event",
+      "definition": "A packet that says which neuron fired. Arrival time is the timestamp."
+    }
+  ]
+}

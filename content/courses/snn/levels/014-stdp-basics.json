@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "slug": "stdp-basics",
+  "course": "snn",
+  "unit": "plasticity",
+  "concept": "stdp",
+  "title": "STDP basics",
+  "summary": "The synapse grows or shrinks depending on which spike came first.",
+  "terms": [
+    {
+      "plain": "who spiked first changes the synapse",
+      "term": "STDP",
+      "definition": "Spike-timing-dependent plasticity. The sign of the synaptic change depends on the order of the presynaptic and postsynaptic spikes."
+    },
+    {
+      "plain": "the synapse gets stronger",
+      "term": "LTP",
+      "definition": "Long-term potentiation. Here, it is the increase when the presynaptic spike comes just before the postsynaptic spike."
+    },
+    {
+      "plain": "the synapse gets weaker",
+      "term": "LTD",
+      "definition": "Long-term depression. Here, it is the decrease when the postsynaptic spike comes first."
+    },
+    {
+      "plain": "only the two spikes at this synapse",
+      "term": "local learning rule",
+      "definition": "A rule that needs only information available at the synapse, not a broadcast of the whole network’s error."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Call the incoming spike “pre” and the receiving neuron’s spike “post”.\nThe synapse can see both.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Pre just before post: the link grows. That is LTP.\nPost before pre: the link shrinks. That is LTD.",
+      "id": "c2"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Two orders.",
+      "lines": [
+        "Pre at 5 ms, post at 8 ms. Pre was first. The synapse grows.",
+        "Post at 5 ms, pre at 8 ms. Post was first. The synapse shrinks."
+      ],
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Pre at 5 ms, post at 8 ms. The synapse…",
+        "choices": [
+          "grows (LTP)",
+          "shrinks (LTD)",
+          "does not change, because both spiked"
+        ],
+        "answer": 0,
+        "why": "Pre before post is the potentiating order.",
+        "simpler": "Ask only which spike happened first."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "STDP needs a teacher to tell the synapse the network’s error.",
+        "answer": false,
+        "why": "The two spike times at that synapse are enough. That is what makes it local.",
+        "simpler": "A local rule does not receive the loss of the whole network."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "Which order produces LTP in ordinary STDP?",
+    "answer": "Presynaptic spike just before the postsynaptic spike."
+  },
+  "deeper": {
+    "note": "Markram, Lübke, Frotscher, and Sakmann paired connected cortical cells and found the order of the two spikes set the sign of the change.",
+    "paper": {
+      "title": "Regulation of synaptic efficacy by coincidence of postsynaptic APs and EPSPs",
+      "authors": [
+        "Henry Markram",
+        "Joachim Lübke",
+        "Michael Frotscher",
+        "Bert Sakmann"
+      ],
+      "year": 1997,
+      "venue": "Science",
+      "section": "The pairing protocol and Figure 1.",
+      "link": "https://doi.org/10.1126/science.275.5297.213"
+    }
+  },
+  "bonus": null,
+  "order": 14,
+  "id": "014"
+}

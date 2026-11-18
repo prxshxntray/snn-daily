@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "id": "036",
+  "slug": "a-million",
+  "course": "snn",
+  "unit": "machines",
+  "order": 36,
+  "title": "A million buckets",
+  "concept": "truenorth",
+  "summary": "A huge chip of programmed buckets, sipping power while it runs.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "The links are written in ahead of time.\nThe chip’s job is to run, not to learn on the fly.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "The demo in the paper.",
+      "lines": [
+        "A video, 400 by 240.",
+        "30 frames a second.",
+        "63 milliwatts."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "This 2014 chip updates its own links while it runs.",
+        "answer": false,
+        "why": "Weights are programmed. Learning happened elsewhere.",
+        "simpler": "That is a specification, not a flaw in an inference machine."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "63 milliwatts belongs with…",
+        "choices": [
+          "that video demo",
+          "every possible workload",
+          "training from scratch"
+        ],
+        "answer": 0,
+        "why": "Power without the workload is not a result.",
+        "simpler": "Keep the number next to the task."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Does TrueNorth learn its synapses on the chip while it runs?",
+    "answer": "No. They are programmed ahead of time."
+  },
+  "deeper": {
+    "note": "Merolla and colleagues, Science 2014. 4096 cores, a million neurons, 256 million synapses. The milliwatts are the vision demo.",
+    "paper": {
+      "title": "A million spiking-neuron integrated circuit with a scalable communication network and interface",
+      "authors": [
+        "Paul A. Merolla",
+        "John V. Arthur",
+        "Rodrigo Alvarez-Icaza",
+        "Andrew S. Cassidy",
+        "Jun Sawada",
+        "Filipp Akopyan",
+        "Bryan L. Jackson",
+        "Nabil Imam",
+        "Chen Guo",
+        "Yutaka Nakamura",
+        "Bernard Brezzo",
+        "Ivan Vo",
+        "Steven K. Esser",
+        "Rathinakumar Appuswamy",
+        "Brian Taba",
+        "Arnon Amir",
+        "Myron D. Flickner",
+        "William P. Risk",
+        "Rajit Manohar",
+        "Dharmendra S. Modha"
+      ],
+      "year": 2014,
+      "venue": "Science",
+      "section": "The core, the tiling, and the power of the vision demonstration.",
+      "link": "https://doi.org/10.1126/science.1254642"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a programmed million-neuron chip",
+      "term": "neurosynaptic core",
+      "definition": "A tile of axons, neurons, and synapses that runs a fixed spiking network. TrueNorth is the 2014 example."
+    }
+  ]
+}

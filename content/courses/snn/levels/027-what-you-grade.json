@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "id": "027",
+  "slug": "what-you-grade",
+  "course": "snn",
+  "unit": "practice",
+  "order": 27,
+  "title": "What you grade",
+  "concept": "losses",
+  "summary": "You can grade how many tips, or when the first tip came. Those are different lessons.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A count grade only sees how many tips.\nThe clock disappears.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A first-tip grade only sees when.\nExtra tips are not the point.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "You care who tipped first. Which grade fits?",
+        "choices": [
+          "When the first tip came",
+          "How many tips in total",
+          "How heavy the bucket is"
+        ],
+        "answer": 0,
+        "why": "A count gives every single tip the same score.",
+        "simpler": "Match the grade to the message you wanted."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Two trainings with the same score learned the same code.",
+        "answer": false,
+        "why": "The score is about labels. The code is about what the tips were asked to be.",
+        "simpler": "Say which statistic the grade read."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Does a count grade see when the tip happened?",
+    "answer": "No. It only sees how many."
+  },
+  "deeper": {
+    "note": "Mostafa trained networks on the time of a single tip, so the nets stayed sparse. snnTorch also offers a rate grade, ce_rate_loss, which only sees counts.",
+    "paper": {
+      "title": "Supervised Learning Based on Temporal Coding in Spiking Neural Networks",
+      "authors": [
+        "Hesham Mostafa"
+      ],
+      "year": 2018,
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+      "section": "The opening argument for grading spike times.",
+      "link": "https://doi.org/10.1109/TNNLS.2017.2726060"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "grade the count or the time",
+      "term": "spike loss",
+      "definition": "The choice of which statistic of the spike train the training objective actually reads."
+    }
+  ]
+}

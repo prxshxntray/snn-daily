@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "app": "first-spike",
+  "course": "snn",
+  "startDate": "2026-11-17",
+  "lessonCount": 42,
+  "lessons": [
+    {
+      "day": 1,
+      "id": "001",
+      "topic": "The neuron",
+      "title": "A leaky bucket",
+      "summary": "A neuron is a bucket that leaks. Fill it to the brim and it tips.",
+      "question": "A bucket tips when the water reaches what?",
+      "answer": "The brim."
+    },
+    {
+      "day": 2,
+      "id": "002",
+      "topic": "The neuron",
+      "title": "The resting level",
+      "summary": "When the pour matches the leak, the water line stays still.",
+      "question": "What is the resting level when half leaks and you pour 2 each moment?",
+      "answer": "4. Leak and pour match there."
+    },
+    {
+      "day": 3,
+      "id": "003",
+      "topic": "The neuron",
+      "title": "Threshold and rate",
+      "summary": "Past the brim, a harder pour means more tips per minute.",
+      "question": "Above threshold, what does a stronger pour do to the spike rate?",
+      "answer": "It makes tips more often."
+    },
+    {
+      "day": 4,
+      "id": "004",
+      "topic": "Change",
+      "title": "Change only",
+      "summary": "You speak only when the value has moved enough from the last value you sent.",
+      "question": "Delta encoding measures a change from which value?",
+      "answer": "The last value you sent, not a sample you stayed quiet about."
+    },
+    {
+      "day": 5,
+      "id": "005",
+      "topic": "The bill",
+      "title": "Weights and SynOps",
+      "summary": "A spike pushes the next neuron only as hard as the weight. Each crossing is one SynOp.",
+      "question": "What is one SynOp?",
+      "answer": "One spike delivered through one synapse."
+    },
+    {
+      "day": 6,
+      "id": "006",
+      "topic": "The bill",
+      "title": "The energy break-even",
+      "summary": "A spiking net does less work only when spikes are rare enough.",
+      "question": "When does a spiking network do less work than a dense one?",
+      "answer": "When spikes are rare enough to sit below the break-even."
+    },
+    {
+      "day": 7,
+      "id": "007",
+      "topic": "Learning",
+      "title": "Timesteps and the window",
+      "summary": "A timestep is one moment. The window is how many moments you keep.",
+      "question": "What is the difference between a timestep and a window?",
+      "answer": "A timestep is one moment. A window is how many moments you keep."
+    },
+    {
+      "day": 8,
+      "id": "008",
+      "topic": "Learning",
+      "title": "Spikes have no slope",
+      "summary": "Below threshold the output is 0. Above it, 1. A step has no slope to learn from.",
+      "question": "Why can’t you learn through a literal spike the usual way?",
+      "answer": "The spike is a step. Its slope is zero almost everywhere."
+    },
+    {
+      "day": 9,
+      "id": "009",
+      "topic": "Learning",
+      "title": "Surrogate gradients",
+      "summary": "While learning, pretend the step has a gentle slope. The spikes you see stay sharp.",
+      "question": "Does a surrogate gradient change the spikes you see?",
+      "answer": "No. It only stands in for the slope while learning."
+    },
+    {
+      "day": 10,
+      "id": "010",
+      "topic": "Layers",
+      "title": "Two layers",
+      "summary": "A tip in front is the pour for the bucket behind it.",
+      "question": "What is passed from one layer to the next?",
+      "answer": "Spikes. A tip in front pours into the next layer."
+    },
+    {
+      "day": 11,
+      "id": "011",
+      "topic": "Codes of time",
+      "title": "The refractory period",
+      "summary": "After a spike, the neuron cannot fire again until it recovers.",
+      "question": "What sets a neuron’s maximum firing rate?",
+      "answer": "The refractory period, the forced wait between spikes."
+    },
+    {
+      "day": 12,
+      "id": "012",
+      "topic": "Codes of time",
+      "title": "Rate coding",
+      "summary": "The message can be how many spikes fall inside a window.",
+      "question": "What is a spike train?",
+      "answer": "The list of times a neuron fired."
+    },
+    {
+      "day": 13,
+      "id": "013",
+      "topic": "Codes of time",
+      "title": "Time to first spike",
+      "summary": "The message can be when the first spike happens, not how many follow.",
+      "question": "In latency coding, does a stronger input spike earlier or later?",
+      "answer": "Earlier."
+    },
+    {
+      "day": 14,
+      "id": "014",
+      "topic": "Plasticity",
+      "title": "STDP basics",
+      "summary": "The synapse grows or shrinks depending on which spike came first.",
+      "question": "Which order produces LTP in ordinary STDP?",
+      "answer": "Presynaptic spike just before the postsynaptic spike."
+    },
+    {
+      "day": 15,
+      "id": "015",
+      "topic": "Plasticity",
+      "title": "The STDP window",
+      "summary": "Only nearby spikes count, and a trace of each spike fades with time.",
+      "question": "What does a larger time constant τ do to a spike trace?",
+      "answer": "The trace fades more slowly, so the synapse remembers the spike longer."
+    },
+    {
+      "day": 16,
+      "id": "016",
+      "topic": "Plasticity",
+      "title": "A third factor",
+      "summary": "The spike pair only writes a fading note. A later reward decides whether the note becomes a real change.",
+      "question": "What does the third factor do in reward-modulated STDP?",
+      "answer": "It decides whether a recent spike pair actually changes the weight."
+    },
+    {
+      "day": 17,
+      "id": "017",
+      "topic": "One step",
+      "title": "The leftover",
+      "summary": "Each quiet moment, only a fraction of the water remains.",
+      "question": "If half the water stays, and you had 8, what is left after a quiet moment?",
+      "answer": "4."
+    },
+    {
+      "day": 18,
+      "id": "018",
+      "topic": "One step",
+      "title": "One quiet moment",
+      "summary": "A step is: keep a fraction, then add the new pour.",
+      "question": "Had 4, half stays, pour 3. What is the water?",
+      "answer": "5."
+    },
+    {
+      "day": 19,
+      "id": "019",
+      "topic": "Richer neurons",
+      "title": "Many moods",
+      "summary": "Some buckets pause. Some tip in a short burst, then stop.",
+      "question": "What does a faster recovery dial let the bucket do?",
+      "answer": "Tip again sooner."
+    },
+    {
+      "day": 20,
+      "id": "020",
+      "topic": "Richer neurons",
+      "title": "In, then out",
+      "summary": "A real spike is sodium rushing in, then potassium pushing back.",
+      "question": "Which ion rushes in to make the upstroke?",
+      "answer": "Sodium."
+    },
+    {
+      "day": 21,
+      "id": "021",
+      "topic": "Codes",
+      "title": "A crowd of buckets",
+      "summary": "One bucket is vague. The crowd’s vote can be sharp.",
+      "question": "One broadly tuned bucket, or the crowd: which one carries the direction?",
+      "answer": "The crowd."
+    },
+    {
+      "day": 22,
+      "id": "022",
+      "topic": "Codes",
+      "title": "Quiet on purpose",
+      "summary": "A good code leaves most buckets empty.",
+      "question": "Should most buckets tip on a simple picture?",
+      "answer": "No. Most should stay quiet."
+    },
+    {
+      "day": 23,
+      "id": "023",
+      "topic": "Synapses",
+      "title": "Winners",
+      "summary": "Links that keep winning go all the way strong. Losers go quiet.",
+      "question": "Do additive wins with a ceiling leave weights spread evenly?",
+      "answer": "No. They pile up at the ceiling and the floor."
+    },
+    {
+      "day": 24,
+      "id": "024",
+      "topic": "Synapses",
+      "title": "Three tips",
+      "summary": "A pair is not enough when the receiver has just been busy.",
+      "question": "Does a recent receiver tip make the next good pair stronger?",
+      "answer": "Yes."
+    },
+    {
+      "day": 25,
+      "id": "025",
+      "topic": "Training",
+      "title": "A dry bucket",
+      "summary": "If a bucket never tips, the usual lesson cannot reach it.",
+      "question": "Can a bucket that never tips learn through its own tips?",
+      "answer": "No."
+    },
+    {
+      "day": 26,
+      "id": "026",
+      "topic": "Training",
+      "title": "A diary of pours",
+      "summary": "To learn across time, keep a short diary, then read it backward.",
+      "question": "Why does a longer diary cost more?",
+      "answer": "You have to store every moment until the lesson reads backward."
+    },
+    {
+      "day": 27,
+      "id": "027",
+      "topic": "Training",
+      "title": "What you grade",
+      "summary": "You can grade how many tips, or when the first tip came. Those are different lessons.",
+      "question": "Does a count grade see when the tip happened?",
+      "answer": "No. It only sees how many."
+    },
+    {
+      "day": 28,
+      "id": "028",
+      "topic": "Training",
+      "title": "Copy a switch",
+      "summary": "A light that is halfway on becomes a bucket that tips about half the time.",
+      "question": "A unit that is off should make the bucket do what?",
+      "answer": "Stay silent."
+    },
+    {
+      "day": 29,
+      "id": "029",
+      "topic": "Training",
+      "title": "The copy is slow",
+      "summary": "The rate trick is about the long run, not the first moments.",
+      "question": "Is the rate copy trustworthy in the first few moments?",
+      "answer": "No. The bucket is still filling."
+    },
+    {
+      "day": 30,
+      "id": "030",
+      "topic": "Reservoirs",
+      "title": "A pond",
+      "summary": "Throw stones in a random pond. Only teach the person reading the ripples.",
+      "question": "In a liquid state machine, which part is trained?",
+      "answer": "The readout. The pond stays random."
+    },
+    {
+      "day": 31,
+      "id": "031",
+      "topic": "Reservoirs",
+      "title": "Don’t stir too hard",
+      "summary": "Too strong, and the pond forgets your stone. Too weak, and the ripple dies at once.",
+      "question": "What happens if the recurrent stir is far too strong?",
+      "answer": "The pond hides the input in its own motion."
+    },
+    {
+      "day": 32,
+      "id": "032",
+      "topic": "Reservoirs",
+      "title": "A brim that rises",
+      "summary": "After a tip, lift the brim for a while. That lift outlasts the leak.",
+      "question": "Why can a rising brim remember longer than the leak?",
+      "answer": "It is a second, slower state written by the tips."
+    },
+    {
+      "day": 33,
+      "id": "033",
+      "topic": "Machines",
+      "title": "Pixels that whisper",
+      "summary": "A pixel speaks only when the light changes.",
+      "question": "When does a DVS pixel stay silent?",
+      "answer": "When the brightness is not changing."
+    },
+    {
+      "day": 34,
+      "id": "034",
+      "topic": "Machines",
+      "title": "Learning beside the bucket",
+      "summary": "The link can change next to the bucket, without a round trip.",
+      "question": "What does Loihi put next to the synapses that a pure inference chip can skip?",
+      "answer": "A programmable local learning rule."
+    },
+    {
+      "day": 35,
+      "id": "035",
+      "topic": "Machines",
+      "title": "Tiny packets",
+      "summary": "The buckets are ordinary programs. The fabric carries the “I tipped” notes.",
+      "question": "On SpiNNaker, is the neuron model fixed silicon or software?",
+      "answer": "Software."
+    },
+    {
+      "day": 36,
+      "id": "036",
+      "topic": "Machines",
+      "title": "A million buckets",
+      "summary": "A huge chip of programmed buckets, sipping power while it runs.",
+      "question": "Does TrueNorth learn its synapses on the chip while it runs?",
+      "answer": "No. They are programmed ahead of time."
+    },
+    {
+      "day": 37,
+      "id": "037",
+      "topic": "Machines",
+      "title": "When quiet saves power",
+      "summary": "Quiet buckets can skip work. Busy ones, and training, are different bills.",
+      "question": "Does a bucket that tips constantly save energy just by being a spike?",
+      "answer": "No. Silence was the saving."
+    },
+    {
+      "day": 38,
+      "id": "038",
+      "topic": "Frontiers",
+      "title": "An open door",
+      "summary": "A deep stack needs a way to pass the signal through unchanged.",
+      "question": "What does an identity path do to the incoming tips?",
+      "answer": "It can pass them through unchanged."
+    },
+    {
+      "day": 39,
+      "id": "039",
+      "topic": "Frontiers",
+      "title": "No fancy average",
+      "summary": "Attention can be “who tipped together,” without a fancy normalization.",
+      "question": "Are Spikformer’s queries ordinary real numbers?",
+      "answer": "No. They are spikes."
+    },
+    {
+      "day": 40,
+      "id": "040",
+      "topic": "Frontiers",
+      "title": "Only a mask",
+      "summary": "Looking can be a mask. Only tips travel onward.",
+      "question": "What replaces the dense score table in spike-driven attention?",
+      "answer": "A mask made of spikes, plus additions."
+    },
+    {
+      "day": 41,
+      "id": "041",
+      "topic": "Frontiers",
+      "title": "One line at a time",
+      "summary": "Keep a running note and update it each word, instead of rereading the whole page.",
+      "question": "Why is a running note a better fit for tips than a full attention table?",
+      "answer": "It updates when an event arrives and can stay quiet otherwise."
+    },
+    {
+      "day": 42,
+      "id": "042",
+      "topic": "Frontiers",
+      "title": "Still open",
+      "summary": "Some 2019 headaches moved. The important ones are still open.",
+      "question": "Is a local learning rule as powerful as backpropagation a solved problem?",
+      "answer": "No. It is still open."
+    }
+  ]
+}

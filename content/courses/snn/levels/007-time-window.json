@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "id": "007",
+  "slug": "time-window",
+  "course": "snn",
+  "unit": "credit",
+  "order": 7,
+  "title": "Timesteps and the window",
+  "concept": "window",
+  "summary": "A timestep is one moment. The window is how many moments you keep.",
+  "terms": [
+    {
+      "plain": "one moment of the simulation",
+      "term": "timestep",
+      "definition": "The clock tick of a discrete spiking network. Membrane, leaks, and spikes update once per timestep."
+    },
+    {
+      "plain": "how many moments you count",
+      "term": "integration window",
+      "definition": "The span of timesteps over which you count spikes or wait for the voltage to settle."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "The simulation walks forward one moment at a time.\nThat moment is a timestep.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "A window of 4 timesteps.",
+      "lines": [
+        "The neuron tips on step 1 and step 3.",
+        "It is quiet on step 2 and step 4.",
+        "In this window the count is 2."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "A longer window makes a rate steadier, and the answer later.\nThe timestep is the moment. The window is how many you keep.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Tips on steps 1 and 3 of a 4-step window. How many tips are in the window?",
+        "choices": [
+          1,
+          2,
+          4
+        ],
+        "answer": 2,
+        "why": "Two of the four steps contain a tip.",
+        "simpler": "Count tips inside the window. Do not count the window length itself."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What is the difference between a timestep and a window?",
+    "answer": "A timestep is one moment. A window is how many moments you keep."
+  },
+  "deeper": {
+    "note": "Rate codes, converted networks, and direct training all pick a window. The choice is part of the model. Gerstner’s Neuronal Dynamics treats the discrete step in chapter 1.",
+    "paper": {
+      "title": "Neuronal Dynamics",
+      "authors": [
+        "Wulfram Gerstner",
+        "Werner M. Kistler",
+        "Richard Naud",
+        "Liam Paninski"
+      ],
+      "year": 2014,
+      "venue": "Cambridge University Press",
+      "section": "Section 1.3, discrete time as a sequence of small updates.",
+      "link": "https://neuronaldynamics.epfl.ch/online/Ch1.S3.html"
+    }
+  },
+  "bonus": null
+}

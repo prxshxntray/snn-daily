@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "slug": "refractory",
+  "course": "snn",
+  "unit": "timing",
+  "concept": "refractory",
+  "title": "The refractory period",
+  "summary": "After a spike, the neuron cannot fire again until it recovers.",
+  "terms": [
+    {
+      "plain": "the forced quiet after a spike",
+      "term": "refractory period",
+      "definition": "A short time after a spike during which the neuron cannot fire again, or can fire only with a much stronger input."
+    },
+    {
+      "plain": "the fastest it can tip",
+      "term": "maximum firing rate",
+      "definition": "The highest spike rate a neuron can reach, set by how long it must wait between spikes."
+    },
+    {
+      "plain": "more input, no more spikes",
+      "term": "saturation",
+      "definition": "The input is so strong that the neuron is already firing as fast as the refractory period allows. Extra input does not raise the rate."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Right after a spike, the neuron is briefly unavailable.\nThat forced quiet is the refractory period.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "A neuron must wait 5 ms between spikes.",
+      "lines": [
+        "In one second there are 1000 ms.",
+        "The fastest it can tip is 1000 ÷ 5 = 200 times.",
+        "That ceiling is its maximum firing rate."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Past that ceiling, a harder input changes nothing.\nThe rate has saturated.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "The neuron must wait 5 ms between spikes. What is the maximum number of spikes in one second?",
+        "choices": [
+          20,
+          200,
+          500
+        ],
+        "answer": 200,
+        "why": "1000 ms ÷ 5 ms = 200 spikes.",
+        "simpler": "Divide one second by the wait between spikes."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Once the rate has saturated, a stronger input still produces more spikes.",
+        "answer": false,
+        "why": "The refractory period is already the limit. Extra input cannot slip a spike into the quiet gap.",
+        "simpler": "Saturation means the rate has stopped rising."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What sets a neuron’s maximum firing rate?",
+    "answer": "The refractory period, the forced wait between spikes."
+  },
+  "deeper": {
+    "note": "Sodium channels need time to recover after a spike. That is the biological refractory period. A leaky integrate-and-fire model adds the same pause by hand. Hodgkin and Huxley measured the currents. Gerstner’s Neuronal Dynamics, section 1.3, shows the pause in the simple model.",
+    "paper": {
+      "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "authors": [
+        "A. L. Hodgkin",
+        "A. F. Huxley"
+      ],
+      "year": 1952,
+      "venue": "The Journal of Physiology",
+      "section": "Sodium inactivation is why a real axon cannot fire again immediately.",
+      "link": "https://doi.org/10.1113/jphysiol.1952.sp004764"
+    }
+  },
+  "bonus": null,
+  "order": 11,
+  "id": "011"
+}

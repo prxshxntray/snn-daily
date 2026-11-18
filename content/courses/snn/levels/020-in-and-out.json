@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "020",
+  "slug": "in-and-out",
+  "course": "snn",
+  "unit": "moods",
+  "order": 20,
+  "title": "In, then out",
+  "concept": "hodgkin-huxley",
+  "summary": "A real spike is sodium rushing in, then potassium pushing back.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Sodium rushes in.\nThat pushes the voltage higher, which lets more sodium in.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Then the sodium door closes,\nand potassium pushes the voltage back down.",
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "The simple brim is a stand-in for that fight.\nUse the ions when the shape of the fight is the question.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What carries the upward rush of a real spike?",
+        "choices": [
+          "Sodium in",
+          "Potassium in",
+          "The hole getting smaller"
+        ],
+        "answer": 0,
+        "why": "Sodium entry is the upstroke. Potassium restores.",
+        "simpler": "Inward sodium first. Outward potassium after."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Which ion rushes in to make the upstroke?",
+    "answer": "Sodium."
+  },
+  "deeper": {
+    "note": "Hodgkin and Huxley separated the currents with a voltage clamp. Read the logic in the introduction. Skip the rate tables on the train.",
+    "paper": {
+      "title": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+      "authors": [
+        "A. L. Hodgkin",
+        "A. F. Huxley"
+      ],
+      "year": 1952,
+      "venue": "The Journal of Physiology",
+      "section": "The introduction’s voltage-clamp logic and the sodium and potassium summary.",
+      "link": "https://doi.org/10.1113/jphysiol.1952.sp004764"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "sodium in, potassium out",
+      "term": "action potential",
+      "definition": "The biological spike: a brief voltage pulse shaped by voltage-gated ion channels."
+    }
+  ]
+}

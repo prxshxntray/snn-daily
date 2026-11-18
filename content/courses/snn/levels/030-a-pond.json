@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "030",
+  "slug": "a-pond",
+  "course": "snn",
+  "unit": "ponds",
+  "order": 30,
+  "title": "A pond",
+  "concept": "liquid",
+  "summary": "Throw stones in a random pond. Only teach the person reading the ripples.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A crowd of buckets, wired at random, ripples when input arrives.\nYou do not teach the crowd.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "You teach a simple reader on top.\nDifferent stones should leave different ripples.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which weights do you teach?",
+        "choices": [
+          "Only the reader on top",
+          "Every wire in the pond",
+          "None"
+        ],
+        "answer": 0,
+        "why": "The pond stays random. The reader learns.",
+        "simpler": "If two stones leave the same ripple, the reader cannot help."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A pond that settles to the same pattern for every input is doing the job.",
+        "answer": false,
+        "why": "That erases the difference you needed.",
+        "simpler": "The title of the paper is computing without those stable wipe-outs."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "In a liquid state machine, which part is trained?",
+    "answer": "The readout. The pond stays random."
+  },
+  "deeper": {
+    "note": "Maass, Natschläger, and Markram named the two hopes: separation, and a reader that can approximate the functions you care about.",
+    "paper": {
+      "title": "Real-time computing without stable states: a new framework for neural computation based on perturbations",
+      "authors": [
+        "Wolfgang Maass",
+        "Thomas Natschläger",
+        "Henry Markram"
+      ],
+      "year": 2002,
+      "venue": "Neural Computation",
+      "section": "Separation, approximation, and the readout.",
+      "link": "https://doi.org/10.1162/089976602760407955"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a random pool plus a trained reader",
+      "term": "liquid state machine",
+      "definition": "A reservoir of spiking neurons that is not trained. Only a readout on its state is trained."
+    }
+  ]
+}

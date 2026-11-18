@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "id": "018",
+  "slug": "one-moment",
+  "course": "snn",
+  "unit": "steps",
+  "order": 18,
+  "title": "One quiet moment",
+  "concept": "one-step",
+  "summary": "A step is: keep a fraction, then add the new pour.",
+  "cards": [
+    {
+      "kind": "numbers",
+      "lead": "Had 4. Half stays. Then pour 3.",
+      "lines": [
+        "Half of 4 is 2.",
+        "Add the pour: 2 + 3.",
+        "The water is 5."
+      ],
+      "id": "c1"
+    },
+    {
+      "kind": "piece",
+      "plain": "The numbers came first. Now the same step in one line.",
+      "numbers": "Half of 4, then plus 3, is 5.",
+      "name": "Stay, then pour.",
+      "bit": "1/2 × 4 + 3",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Had 2. Beta is 1/2. You pour 4. What is the water?",
+        "choices": [
+          3,
+          5,
+          8
+        ],
+        "answer": 5,
+        "why": "Half of 2 is 1. 1 + 4 = 5.",
+        "simpler": "Shrink the old water first. Then add the pour."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "You add the pour before throwing away the forgotten half.",
+        "answer": false,
+        "why": "The old water shrinks first. The pour is added after.",
+        "simpler": "Order: leftover, then the new pour."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Had 4, half stays, pour 3. What is the water?",
+    "answer": "5."
+  },
+  "deeper": {
+    "note": "That is the whole step people code. snn.Leaky(beta=…) does it, and returns the tip plus the new water level.",
+    "paper": {
+      "title": "Training Spiking Neural Networks Using Lessons From Deep Learning",
+      "authors": [
+        "Jason K. Eshraghian",
+        "Max Ward",
+        "Emre Neftci",
+        "Xinxin Wang",
+        "Gregor Lenz",
+        "Girish Dwivedi",
+        "Mohammed Bennamoun",
+        "Doo Seok Jeong",
+        "Wei D. Lu"
+      ],
+      "year": 2023,
+      "venue": "Proceedings of the IEEE",
+      "section": "The training-loop section is later. Today is only the one-step update.",
+      "link": "https://arxiv.org/abs/2109.12894"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "keep a fraction, then add the pour",
+      "term": "discrete LIF step",
+      "definition": "One timestep of a leaky integrate-and-fire neuron: decay the voltage, then add the input current."
+    }
+  ]
+}

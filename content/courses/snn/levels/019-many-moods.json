@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "id": "019",
+  "slug": "many-moods",
+  "course": "snn",
+  "unit": "moods",
+  "order": 19,
+  "title": "Many moods",
+  "concept": "izhikevich",
+  "summary": "Some buckets pause. Some tip in a short burst, then stop.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "One water level only knows how to fill and tip.\nReal cells have more moods.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A second, slower dial can make the bucket tired after a tip,\nor ready again very fast.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which dial lets a bucket tip again sooner?",
+        "choices": [
+          "The one that recovers faster",
+          "The one that forgets the brim",
+          "The one that deletes the pour"
+        ],
+        "answer": 0,
+        "why": "A fast recovery dial releases the brake quickly.",
+        "simpler": "The pause after a tip is a slow dial, not the water itself."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Four small dials can sketch many firing moods without modeling every ion.",
+        "answer": true,
+        "why": "That was Izhikevich’s bargain: cheap, and still many patterns.",
+        "simpler": "You do not need the ion story to get a burst or a fast cell."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What does a faster recovery dial let the bucket do?",
+    "answer": "Tip again sooner."
+  },
+  "deeper": {
+    "note": "The 2003 model uses voltage plus a recovery variable, and four parameters after each tip. Look at Figure 1, the gallery, not the algebra first.",
+    "paper": {
+      "title": "Simple model of spiking neurons",
+      "authors": [
+        "Eugene M. Izhikevich"
+      ],
+      "year": 2003,
+      "venue": "IEEE Transactions on Neural Networks",
+      "section": "The reset rule and Figure 1.",
+      "link": "https://doi.org/10.1109/TNN.2003.820440"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a slower second dial",
+      "term": "recovery variable",
+      "definition": "A state besides voltage that can pause a neuron or let it burst. The Izhikevich model is the famous cheap version."
+    }
+  ]
+}

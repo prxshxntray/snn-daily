@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "id": "017",
+  "slug": "the-leftover",
+  "course": "snn",
+  "unit": "steps",
+  "order": 17,
+  "title": "The leftover",
+  "concept": "beta",
+  "summary": "Each quiet moment, only a fraction of the water remains.",
+  "cards": [
+    {
+      "kind": "numbers",
+      "lead": "No new pour. Just a quiet moment.",
+      "lines": [
+        "You had 8.",
+        "Half of it stays.",
+        "4 remains."
+      ],
+      "id": "c1"
+    },
+    {
+      "kind": "piece",
+      "plain": "You just watched a quiet moment keep only part of the water.",
+      "numbers": "8 became 4.",
+      "name": "That leftover fraction is called beta.",
+      "bit": "1/2",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Beta is 1/2. You have 6. After one quiet moment, with no pour, what is left?",
+        "choices": [
+          2,
+          3,
+          6
+        ],
+        "answer": 3,
+        "why": "Half of 6 is 3.",
+        "simpler": "Multiply by the leftover fraction. Nothing was poured."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A beta near 1 means the bucket forgets slowly.",
+        "answer": true,
+        "why": "Almost all the water stays, so the memory is long.",
+        "simpler": "1 would keep everything. 0 would empty it at once."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "If half the water stays, and you had 8, what is left after a quiet moment?",
+    "answer": "4."
+  },
+  "deeper": {
+    "note": "In code, beta is that fraction per step. The snnTorch walk-through is tutorial 2, beside the Eshraghian paper’s neuron section.",
+    "paper": {
+      "title": "Training Spiking Neural Networks Using Lessons From Deep Learning",
+      "authors": [
+        "Jason K. Eshraghian",
+        "Max Ward",
+        "Emre Neftci",
+        "Xinxin Wang",
+        "Gregor Lenz",
+        "Girish Dwivedi",
+        "Mohammed Bennamoun",
+        "Doo Seok Jeong",
+        "Wei D. Lu"
+      ],
+      "year": 2023,
+      "venue": "Proceedings of the IEEE",
+      "section": "The discrete leaky neuron. Companion: https://snntorch.readthedocs.io/en/latest/tutorials/tutorial_2.html",
+      "link": "https://doi.org/10.1109/JPROC.2023.3308088"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "the fraction that stays",
+      "term": "leak factor β",
+      "definition": "How much of the previous voltage remains after one timestep, before the new input is added."
+    }
+  ]
+}

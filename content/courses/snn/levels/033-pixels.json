@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "033",
+  "slug": "pixels",
+  "course": "snn",
+  "unit": "machines",
+  "order": 33,
+  "title": "Pixels that whisper",
+  "concept": "dvs",
+  "summary": "A pixel speaks only when the light changes.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A still scene is silence.\nMotion, or a light turning on, makes a pixel speak.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The note says where, when,\nand whether it got brighter or darker.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "A poster that never moves produces…",
+        "choices": [
+          "almost no events",
+          "a full picture every instant",
+          "a tip from every pixel"
+        ],
+        "answer": 0,
+        "why": "No change, no event.",
+        "simpler": "The sensor is a change detector."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Stuffing the events back into frames keeps the reason you used this camera.",
+        "answer": false,
+        "why": "Frames put the clock and the dense grid back.",
+        "simpler": "Binning can be a baseline. It is not the stream."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "When does a DVS pixel stay silent?",
+    "answer": "When the brightness is not changing."
+  },
+  "deeper": {
+    "note": "Lichtsteiner, Posch, and Delbrück’s 2008 sensor is the 128 by 128 chip in the paper title. The later map of the field is Gallego and colleagues’ survey.",
+    "paper": {
+      "title": "A 128×128 120 dB 15 μs Latency Asynchronous Temporal Contrast Vision Sensor",
+      "authors": [
+        "Patrick Lichtsteiner",
+        "Christoph Posch",
+        "Tobi Delbruck"
+      ],
+      "year": 2008,
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "section": "The pixel: temporal contrast, ON and OFF events.",
+      "link": "https://doi.org/10.1109/JSSC.2007.914337"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a pixel that speaks only when light changes",
+      "term": "event camera",
+      "definition": "A sensor whose output is a stream of change events, not frames."
+    }
+  ]
+}

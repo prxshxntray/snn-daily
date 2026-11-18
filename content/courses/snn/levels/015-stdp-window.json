@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "slug": "stdp-window",
+  "course": "snn",
+  "unit": "plasticity",
+  "concept": "stdp-window",
+  "title": "The STDP window",
+  "summary": "Only nearby spikes count, and a trace of each spike fades with time.",
+  "terms": [
+    {
+      "plain": "how much the synapse changes versus the gap",
+      "term": "STDP window",
+      "definition": "The curve of synaptic change against the time between pre and post. It is large near zero and dies away on either side."
+    },
+    {
+      "plain": "a trace that fades by a fixed fraction",
+      "term": "exponential decay",
+      "definition": "Each moment the remaining trace is multiplied by the same fraction, so it falls quickly and then lingers."
+    },
+    {
+      "plain": "how fast that trace fades",
+      "term": "time constant τ",
+      "definition": "The time over which a trace falls to about a third of what it was. A larger τ is a longer memory."
+    },
+    {
+      "plain": "a fading memory that a spike happened",
+      "term": "spike trace",
+      "definition": "A variable at the synapse that jumps up when a spike arrives and then decays. The overlap of the pre and post traces is what the window measures."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A spike from a second ago is not a partner.\nThe window is tall only when pre and post are close.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Two gaps, same order.",
+      "lines": [
+        "10 ms apart: a large change.",
+        "100 ms apart: almost none.",
+        "The height falls off as the gap grows."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Each spike leaves a trace that fades.\nThe fade is exponential, with a time constant τ.\nA bigger τ means the synapse remembers a spike for longer.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which pair changes the synapse more?",
+        "choices": [
+          "Pre and post 10 ms apart",
+          "Pre and post 100 ms apart",
+          "Any pair from the same minute"
+        ],
+        "answer": 0,
+        "why": "The window is largest at short gaps.",
+        "simpler": "Far apart, both traces have already faded."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "A trace starts at 8 and halves every step. After one step, what is left?",
+        "choices": [
+          2,
+          4,
+          8
+        ],
+        "answer": 4,
+        "why": "Half of 8 is 4. That is exponential decay with a short τ.",
+        "simpler": "Multiply by the fraction that remains. Do not subtract a fixed amount unless the rule says so."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What does a larger time constant τ do to a spike trace?",
+    "answer": "The trace fades more slowly, so the synapse remembers the spike longer."
+  },
+  "deeper": {
+    "note": "Bi and Poo plotted synaptic change against the gap between spikes. That plot is the window. The exponential traces are the usual way to write the same curve in a simulation. Song, Miller, and Abbott used that form.",
+    "paper": {
+      "title": "Synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type",
+      "authors": [
+        "Guo-qiang Bi",
+        "Mu-ming Poo"
+      ],
+      "year": 1998,
+      "venue": "The Journal of Neuroscience",
+      "section": "The figure of change against spike interval.",
+      "link": "https://doi.org/10.1523/JNEUROSCI.18-24-10464.1998"
+    }
+  },
+  "bonus": null,
+  "order": 15,
+  "id": "015"
+}

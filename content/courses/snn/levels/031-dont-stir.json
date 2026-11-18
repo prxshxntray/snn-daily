@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "id": "031",
+  "slug": "dont-stir",
+  "course": "snn",
+  "unit": "ponds",
+  "order": 31,
+  "title": "Don’t stir too hard",
+  "concept": "reservoir-gain",
+  "summary": "Too strong, and the pond forgets your stone. Too weak, and the ripple dies at once.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "The pond needs to echo the recent past,\nwithout drowning it in its own splashing.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "There is a middle.\nFor spiking ponds the dials are link strength, how many links, and the hole.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Stirring much too hard does what?",
+        "choices": [
+          "The pond’s own motion hides the input",
+          "The reader gets easier",
+          "Tips stop forever"
+        ],
+        "answer": 0,
+        "why": "The echo of the stone is lost in the weather.",
+        "simpler": "Too gentle, and there is no echo at all."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "You should fit the reader on the pond’s first moments, including the arbitrary start.",
+        "answer": false,
+        "why": "Throw away a short washout. The start is not the input.",
+        "simpler": "Also don’t trust every ripple. A simple reader will memorize noise."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What happens if the recurrent stir is far too strong?",
+    "answer": "The pond hides the input in its own motion."
+  },
+  "deeper": {
+    "note": "Lukoševičius and Jaeger wrote the field guide for reservoirs, mostly analog ones. Treat the spectral-radius knob as advice you translate, not as a spiking experiment.",
+    "paper": {
+      "title": "Reservoir computing approaches to recurrent neural network training",
+      "authors": [
+        "Mantas Lukoševičius",
+        "Herbert Jaeger"
+      ],
+      "year": 2009,
+      "venue": "Computer Science Review",
+      "section": "Spectral radius, washout, and regularizing the readout.",
+      "link": "https://doi.org/10.1016/j.cosrev.2009.03.005"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "not too wild, not too dead",
+      "term": "reservoir gain",
+      "definition": "How strongly the pool feeds back on itself. Too high hides the input. Too low, the echo dies."
+    }
+  ]
+}

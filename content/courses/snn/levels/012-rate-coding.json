@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "slug": "rate-coding",
+  "course": "snn",
+  "unit": "timing",
+  "concept": "rate-code",
+  "title": "Rate coding",
+  "summary": "The message can be how many spikes fall inside a window.",
+  "terms": [
+    {
+      "plain": "meaning carried by how often",
+      "term": "rate coding",
+      "definition": "A code in which the signal is the number of spikes per unit time, not the precise time of each one."
+    },
+    {
+      "plain": "how many spikes in the window",
+      "term": "spike count",
+      "definition": "The number of spikes a neuron emits during a chosen interval."
+    },
+    {
+      "plain": "the sequence of spike times",
+      "term": "spike train",
+      "definition": "The full list of times at which a neuron fired. A rate is a summary of that list."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A spike train is the list of times a neuron fired.\nA rate throws away the individual times and keeps the count.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "One spike train, one window.",
+      "lines": [
+        "Spikes at 10 ms, 30 ms, 50 ms, and 90 ms.",
+        "The window is 100 ms.",
+        "The spike count is 4. The rate is 40 per second."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Spikes at 10, 30, 50, and 90 ms. How many spikes are in a 100 ms window?",
+        "choices": [
+          2,
+          4,
+          40
+        ],
+        "answer": 4,
+        "why": "Four events fall inside the window. 40 per second is the rate, not the count.",
+        "simpler": "Count the spikes. The rate comes after you divide by time."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "A rate code keeps which part of the spike train?",
+        "choices": [
+          "How many spikes fell in the window",
+          "The exact time of every spike",
+          "The shape of each spike"
+        ],
+        "answer": 0,
+        "why": "The count is the message. The precise times are discarded.",
+        "simpler": "If the times themselves matter, you are no longer reading a rate."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What is a spike train?",
+    "answer": "The list of times a neuron fired."
+  },
+  "deeper": {
+    "note": "Adrian and Zotterman showed a single sensory ending whose impulse frequency rose with the strength of a stretch. The count in a window is the classic rate code.",
+    "paper": {
+      "title": "The impulses produced by sensory nerve-endings: Part II. The response of a Single End-Organ",
+      "authors": [
+        "E. D. Adrian",
+        "Yngve Zotterman"
+      ],
+      "year": 1926,
+      "venue": "The Journal of Physiology",
+      "section": "Impulse frequency rises with stimulus intensity.",
+      "link": "https://doi.org/10.1113/jphysiol.1926.sp002281"
+    }
+  },
+  "bonus": null,
+  "order": 12,
+  "id": "012"
+}

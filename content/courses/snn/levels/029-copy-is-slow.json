@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "id": "029",
+  "slug": "copy-is-slow",
+  "course": "snn",
+  "unit": "practice",
+  "order": 29,
+  "title": "The copy is slow",
+  "concept": "conversion-limits",
+  "summary": "The rate trick is about the long run, not the first moments.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Right after you start, the bucket is still filling.\nIts “rate” is a bad copy.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Bias can be a constant pour.\nA max over a short window is not the same as a max of settled rates.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Eight moments is automatically enough for the copy to settle.",
+        "answer": false,
+        "why": "Settling is a fact you have to check, not a promise.",
+        "simpler": "The theory is about the steady drip, after the start-up."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "The copy is weakest when…",
+        "choices": [
+          "you only allow a few moments",
+          "you allow a long window",
+          "the unit was off"
+        ],
+        "answer": 0,
+        "why": "Few moments, poor average.",
+        "simpler": "More time, better copy, slower decision."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Is the rate copy trustworthy in the first few moments?",
+    "answer": "No. The bucket is still filling."
+  },
+  "deeper": {
+    "note": "Rueckauer and colleagues wrote the steady-rate story carefully, including where it breaks: pooling, and low latency.",
+    "paper": {
+      "title": "Conversion of Continuous-Valued Deep Networks to Efficient Event-Driven Networks for Image Classification",
+      "authors": [
+        "Bodo Rueckauer",
+        "Iulia-Alexandra Lungu",
+        "Yuhuang Hu",
+        "Michael Pfeiffer",
+        "Shih-Chii Liu"
+      ],
+      "year": 2017,
+      "venue": "Frontiers in Neuroscience",
+      "section": "The rate theory, then bias, pooling, and latency.",
+      "link": "https://doi.org/10.3389/fnins.2017.00682"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "the rate needs time to settle",
+      "term": "conversion latency",
+      "definition": "The timesteps a converted network must run before its spike count is a fair copy of the original activation."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "id": "004",
+  "slug": "delta",
+  "course": "snn",
+  "unit": "signals",
+  "order": 4,
+  "title": "Change only",
+  "concept": "delta",
+  "summary": "You speak only when the value has moved enough from the last value you sent.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "You do not report the level.\nYou report a change, and only when it is big enough.",
+      "id": "c1"
+    },
+    {
+      "kind": "steps",
+      "title": "Last sent, not the previous reading",
+      "frames": [
+        {
+          "caption": "Last sent is 0. The new reading is 1. Change from last sent is 1. That is too small, so you stay quiet. Last sent stays 0.",
+          "sent": 0,
+          "reading": 1,
+          "previous": 0,
+          "send": false
+        },
+        {
+          "caption": "The reading is 1 again. The previous reading is also 1, so a wrong comparison says the change is 0. Last sent is still 0, so the real change is still 1. You stay quiet.",
+          "sent": 0,
+          "reading": 1,
+          "previous": 1,
+          "send": false
+        },
+        {
+          "caption": "The reading jumps to 3. Previous reading says the change is 2. Last sent is still 0, so the change you should measure is 3. You send, and last sent becomes 3.",
+          "sent": 0,
+          "reading": 3,
+          "previous": 1,
+          "send": true
+        }
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Last sent is 0. You send only if the change is at least 2.",
+      "lines": [
+        "Signal reads 1. Change from 0 is 1. Stay quiet. Last sent is still 0.",
+        "Signal reads 1 again. Still 1. Stay quiet.",
+        "Signal reads 3. Change from the last sent 0 is 3. Send. Last sent becomes 3."
+      ],
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "The signal hits 3. What change do you measure?",
+        "choices": [
+          "3, from the last sent 0",
+          "2, from the previous sample 1",
+          "0, because you already saw a 1"
+        ],
+        "answer": 0,
+        "why": "You never sent the 1s, so the memory is still 0. 3 − 0 = 3.",
+        "simpler": "Quiet samples do not update the memory. Only a send does. Measure from the last sent value."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "You just sent 3. The signal moves to 4. Change from the last sent value?",
+        "choices": [
+          1,
+          3,
+          4
+        ],
+        "answer": 1,
+        "why": "Last sent is now 3. 4 − 3 = 1.",
+        "simpler": "After a send, the memory jumps to the value you sent."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "Delta encoding measures a change from which value?",
+    "answer": "The last value you sent, not a sample you stayed quiet about."
+  },
+  "deeper": {
+    "note": "This is how a pixel in a change-only sensor decides to speak. Lichtsteiner, Posch, and Delbrück built that idea into the dynamic vision sensor: an event when log brightness has moved enough.",
+    "paper": {
+      "title": "A 128×128 120 dB 15 μs Latency Asynchronous Temporal Contrast Vision Sensor",
+      "authors": [
+        "Patrick Lichtsteiner",
+        "Christoph Posch",
+        "Tobi Delbruck"
+      ],
+      "year": 2008,
+      "venue": "IEEE Journal of Solid-State Circuits",
+      "section": "The pixel compares against the last value it emitted, not every intermediate sample.",
+      "link": "https://doi.org/10.1109/JSSC.2007.914337"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "send the change",
+      "term": "delta encoding",
+      "definition": "Report how the signal moved, not its absolute level."
+    },
+    {
+      "plain": "measure from the last value you sent",
+      "term": "sigma-delta encoding",
+      "definition": "Keep a memory of the last transmitted value, and send when the error from that memory is large enough."
+    }
+  ]
+}

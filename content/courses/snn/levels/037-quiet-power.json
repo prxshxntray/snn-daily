@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "037",
+  "slug": "quiet-power",
+  "course": "snn",
+  "unit": "machines",
+  "order": 37,
+  "title": "When quiet saves power",
+  "concept": "energy",
+  "summary": "Quiet buckets can skip work. Busy ones, and training, are different bills.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Three different savings get called “energy.”\nNot switching. Not moving weights far away. Not doing a dense multiply you did not need.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A bucket that tips all the time saves none of the first.\nTraining on a graphics chip is a different bill entirely.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which one is not, by itself, the chip savings?",
+        "choices": [
+          "Training with a long diary on a graphics chip",
+          "Skipping work while a bucket is quiet",
+          "Keeping weights next to the buckets"
+        ],
+        "answer": 0,
+        "why": "Training cost and running cost are different.",
+        "simpler": "Name which saving, and the baseline, before repeating a big ratio."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A comparison that changes the task, the accuracy, and the chip can still be called a property of spikes.",
+        "answer": false,
+        "why": "Too many things moved. The ratio is not about spikes alone.",
+        "simpler": "Hold the task and the accuracy still. Name the hardware."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Does a bucket that tips constantly save energy just by being a spike?",
+    "answer": "No. Silence was the saving."
+  },
+  "deeper": {
+    "note": "Roy, Jaiswal, and Panda separate encoding, algorithm, and hardware. Use the perspective as a checklist.",
+    "paper": {
+      "title": "Towards spike-based machine intelligence with neuromorphic computing",
+      "authors": [
+        "Kaushik Roy",
+        "Akhilesh Jaiswal",
+        "Priyadarshini Panda"
+      ],
+      "year": 2019,
+      "venue": "Nature",
+      "section": "The taxonomy, read with a pencil on every comparison.",
+      "link": "https://doi.org/10.1038/s41586-019-1677-2"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "skip work while silent",
+      "term": "event-driven compute",
+      "definition": "Hardware or an algorithm that does an operation only when a spike arrives, instead of on every clock for every unit."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "023",
+  "slug": "winners",
+  "course": "snn",
+  "unit": "links",
+  "order": 23,
+  "title": "Winners",
+  "concept": "competition",
+  "summary": "Links that keep winning go all the way strong. Losers go quiet.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "If every win is a full step, and there is a ceiling,\nwinners march to the ceiling.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Losers march to the floor.\nYou are left with a few strong links, not a mush of medium ones.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "After many wins and losses with hard ceilings, weights look like…",
+        "choices": [
+          "a few at the ceiling, a few at the floor",
+          "everyone stuck in the middle",
+          "all links equal"
+        ],
+        "answer": 0,
+        "why": "Full-size steps plus walls empty the middle.",
+        "simpler": "A step that shrinks as you near the wall stays mushier."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Without a wall, a link that only wins will grow without limit.",
+        "answer": true,
+        "why": "The wall is what stops the march.",
+        "simpler": "An additive win has no natural stopping point."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Do additive wins with a ceiling leave weights spread evenly?",
+    "answer": "No. They pile up at the ceiling and the floor."
+  },
+  "deeper": {
+    "note": "Song, Miller, and Abbott showed the competition. The histogram going to two piles is the result.",
+    "paper": {
+      "title": "Competitive Hebbian learning through spike-timing-dependent synaptic plasticity",
+      "authors": [
+        "Sen Song",
+        "Kenneth D. Miller",
+        "L. F. Abbott"
+      ],
+      "year": 2000,
+      "venue": "Nature Neuroscience",
+      "section": "The model and the bimodal weights.",
+      "link": "https://doi.org/10.1038/78829"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a few links at the ceiling",
+      "term": "synaptic competition",
+      "definition": "When additive STDP plus hard bounds drives weights to the extremes, so a neuron selects a subset of inputs."
+    }
+  ]
+}

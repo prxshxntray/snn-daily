@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "id": "040",
+  "slug": "only-a-mask",
+  "course": "snn",
+  "unit": "shapes",
+  "order": 40,
+  "title": "Only a mask",
+  "concept": "spike-driven",
+  "summary": "Looking can be a mask. Only tips travel onward.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A stricter attention uses the query as a mask,\nplus additions. A silent query does no work.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The shortcut has to carry tips too.\nAn analog bypass is a wire that is never quiet.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which shortcut breaks the event-driven story?",
+        "choices": [
+          "One that carries ordinary numbers around the tip",
+          "One that carries the tip itself",
+          "One that stays silent when nothing happened"
+        ],
+        "answer": 0,
+        "why": "A real-valued bypass is never a tip and never quiet.",
+        "simpler": "They report 77.1% on ImageNet. The fold-change in energy is their operation count, not a chip on your desk."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A cost that grows with every pair of tokens gets painful on long sequences.",
+        "answer": true,
+        "why": "That dense table is quadratic.",
+        "simpler": "A mask or a running note avoids building the whole table."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What replaces the dense score table in spike-driven attention?",
+    "answer": "A mask made of spikes, plus additions."
+  },
+  "deeper": {
+    "note": "Yao and colleagues, NeurIPS 2023. Read the mask, the residuals, and then the energy accounting as an argument about operations.",
+    "paper": {
+      "title": "Spike-driven Transformer",
+      "authors": [
+        "Man Yao",
+        "Jiakui Hu",
+        "Zhaokun Zhou",
+        "Li Yuan",
+        "Yonghong Tian",
+        "Bo Xu",
+        "Guoqi Li"
+      ],
+      "year": 2023,
+      "venue": "Advances in Neural Information Processing Systems",
+      "section": "Spike-driven self-attention and the rearranged residuals.",
+      "link": "https://arxiv.org/abs/2307.01694"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "looking is a mask",
+      "term": "spike-driven attention",
+      "definition": "Attention computed with masks and additions on spikes, so a silent query causes no work."
+    }
+  ]
+}

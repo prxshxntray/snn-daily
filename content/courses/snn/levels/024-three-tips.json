@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "id": "024",
+  "slug": "three-tips",
+  "course": "snn",
+  "unit": "links",
+  "order": 24,
+  "title": "Three tips",
+  "concept": "triplet",
+  "summary": "A pair is not enough when the receiver has just been busy.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "The same order can grow a link a lot, or barely,\ndepending on how recently the receiver tipped.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "If the receiver just tipped, a new good pair grows more.\nThe link remembers a third tip, not only the last two.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "An isolated pair and a pair during a busy streak are the same event.",
+        "answer": false,
+        "why": "The recent receiver tip changes the size of the change.",
+        "simpler": "Busy means a fresh third tip is still around."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "The extra tip the rule remembers belongs to…",
+        "choices": [
+          "the receiver, a moment ago",
+          "a third cell far away",
+          "the teacher signal"
+        ],
+        "answer": 0,
+        "why": "It is the receiver’s own recent tip, kept as a short trace.",
+        "simpler": "No global teacher. Just a local memory of the last receiver tip."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Does a recent receiver tip make the next good pair stronger?",
+    "answer": "Yes."
+  },
+  "deeper": {
+    "note": "Pfister and Gerstner wrote the triplet so one rule could fit both timing and rate experiments.",
+    "paper": {
+      "title": "Triplets of spikes in a model of spike timing-dependent plasticity",
+      "authors": [
+        "Jean-Pascal Pfister",
+        "Wulfram Gerstner"
+      ],
+      "year": 2006,
+      "venue": "The Journal of Neuroscience",
+      "section": "The model section.",
+      "link": "https://doi.org/10.1523/JNEUROSCI.1425-06.2006"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a pair plus a recent spike",
+      "term": "triplet STDP",
+      "definition": "A plasticity rule that uses three spikes, so the size of the change depends on recent rate as well as order."
+    }
+  ]
+}

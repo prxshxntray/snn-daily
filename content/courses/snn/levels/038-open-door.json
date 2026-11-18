@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "id": "038",
+  "slug": "open-door",
+  "course": "snn",
+  "unit": "shapes",
+  "order": 38,
+  "title": "An open door",
+  "concept": "sew",
+  "summary": "A deep stack needs a way to pass the signal through unchanged.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A good deep block can choose to do nothing.\nThe signal walks through an open door.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Swap the usual on-switch for a tip,\nand that door often stops being a door.\nExtra floors make the stack worse.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What should an open door do to the tips coming in?",
+        "choices": [
+          "Pass them through unchanged",
+          "Turn them into a count",
+          "Silence them"
+        ],
+        "answer": 0,
+        "why": "Identity means the output tips match the input tips.",
+        "simpler": "If no setting of the block can do that, you do not have the door."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Fang and colleagues had to change how the shortcut and the block combine.",
+        "answer": true,
+        "why": "The element-wise combination is what made identity easy again.",
+        "simpler": "Depth then helped, past a hundred floors, at few moments."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What does an identity path do to the incoming tips?",
+    "answer": "It can pass them through unchanged."
+  },
+  "deeper": {
+    "note": "The paper is Deep Residual Learning in Spiking Neural Networks. The spike-element-wise block is the door.",
+    "paper": {
+      "title": "Deep Residual Learning in Spiking Neural Networks",
+      "authors": [
+        "Wei Fang",
+        "Zhaofei Yu",
+        "Yanqi Chen",
+        "Tiejun Huang",
+        "Timothée Masquelier",
+        "Yonghong Tian"
+      ],
+      "year": 2021,
+      "venue": "Advances in Neural Information Processing Systems",
+      "section": "Why a naive spiking ResNet loses identity, and the SEW block.",
+      "link": "https://arxiv.org/abs/2102.04159"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a block that can pass spikes through",
+      "term": "identity mapping",
+      "definition": "A residual path whose output can equal its input, so adding depth does not have to make the network worse."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "025",
+  "slug": "dry-bucket",
+  "course": "snn",
+  "unit": "practice",
+  "order": 25,
+  "title": "A dry bucket",
+  "concept": "dead-neuron",
+  "summary": "If a bucket never tips, the usual lesson cannot reach it.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A lesson that only passes through tips\ncannot teach a bucket that never tips.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The dry bucket stays dry.\nThat is the trap.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A bucket that never tips still gets a normal lesson through its tips.",
+        "answer": false,
+        "why": "There is no tip to carry the lesson.",
+        "simpler": "No tip, no path backward through that bucket."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "The trap is called…",
+        "choices": [
+          "a dry bucket that cannot learn to tip",
+          "a bucket that tips too often",
+          "a hole that is too small"
+        ],
+        "answer": 0,
+        "why": "Silence blocks the usual lesson.",
+        "simpler": "The next level is the gentle lie that lets a nearly dry bucket still learn."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Can a bucket that never tips learn through its own tips?",
+    "answer": "No."
+  },
+  "deeper": {
+    "note": "Neftci, Mostafa, and Zenke separate this from the other training headaches. Read sections II and III before the fix.",
+    "paper": {
+      "title": "Surrogate Gradient Learning in Spiking Neural Networks",
+      "authors": [
+        "Emre O. Neftci",
+        "Hesham Mostafa",
+        "Friedemann Zenke"
+      ],
+      "year": 2019,
+      "venue": "IEEE Signal Processing Magazine",
+      "section": "Sections II and III, the obstacles.",
+      "link": "https://doi.org/10.1109/MSP.2019.2931595"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a neuron that never spikes cannot learn",
+      "term": "dead neuron",
+      "definition": "A unit whose true spike derivative is zero, so gradient learning never turns it on."
+    }
+  ]
+}

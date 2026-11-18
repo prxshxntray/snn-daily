@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "id": "003",
+  "slug": "spike-rate",
+  "course": "snn",
+  "unit": "buckets",
+  "order": 3,
+  "title": "Threshold and rate",
+  "concept": "spike-rate",
+  "summary": "Past the brim, a harder pour means more tips per minute.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "If rest sits above the brim, the water cannot stay still.\nIt hits the line, tips, empties, and climbs again.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Brim at 4. You empty on every tip.",
+      "lines": [
+        "A small pour reaches the brim every 4 moments.",
+        "A harder pour reaches it every 2 moments.",
+        "More pour, more tips. That count per minute is the spike rate."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What does a harder pour do, once you are past the brim?",
+        "choices": [
+          "Tips come more often",
+          "Tips stop",
+          "The brim moves"
+        ],
+        "answer": 0,
+        "why": "You climb back to the brim faster, so the rate goes up.",
+        "simpler": "Rate is just how often the bucket tips."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "A pour reaches the brim every 2 moments. In 6 moments, how many tips?",
+        "choices": [
+          2,
+          3,
+          6
+        ],
+        "answer": 3,
+        "why": "6 ÷ 2 = 3 tips.",
+        "simpler": "Divide the time by the gap between tips."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Above threshold, what does a stronger pour do to the spike rate?",
+    "answer": "It makes tips more often."
+  },
+  "deeper": {
+    "note": "Threshold is the brim. Rate is how often you cross it. Abbott’s note is the historical bucket. Adrian later measured rate as impulses per second.",
+    "paper": {
+      "title": "Lapicque's introduction of the integrate-and-fire model neuron (1907)",
+      "authors": [
+        "L. F. Abbott"
+      ],
+      "year": 1999,
+      "venue": "Brain Research Bulletin",
+      "section": "Threshold as a separate rule from the leak. Rate is the count of crossings.",
+      "link": "https://doi.org/10.1016/S0361-9230(99)00161-6"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "the brim",
+      "term": "firing threshold",
+      "definition": "The voltage θ the membrane must reach before the neuron emits a spike."
+    },
+    {
+      "plain": "how often it tips",
+      "term": "spike rate",
+      "definition": "Spikes per unit time. Above threshold, a stronger input usually raises it."
+    },
+    {
+      "plain": "emptying after a tip",
+      "term": "reset",
+      "definition": "What happens to the voltage right after a spike, so the neuron can fire again."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "id": "001",
+  "slug": "leaky-bucket",
+  "course": "snn",
+  "unit": "buckets",
+  "order": 1,
+  "title": "A leaky bucket",
+  "concept": "leak",
+  "summary": "A neuron is a bucket that leaks. Fill it to the brim and it tips.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A neuron is a bucket.\nSignal pours in like water.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The bucket has a hole.\nWait, and the water drains away.",
+      "id": "c2"
+    },
+    {
+      "kind": "toy",
+      "toy": "leaky-bucket",
+      "id": "c3"
+    },
+    {
+      "kind": "numbers",
+      "lead": "One quiet pour.",
+      "lines": [
+        "The brim is at 10.",
+        "You pour 6.",
+        "The hole takes 2.",
+        "4 is left. It does not tip."
+      ],
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "The bucket tips when the water…",
+        "choices": [
+          "reaches the brim",
+          "is half gone",
+          "starts to leak"
+        ],
+        "answer": 0,
+        "why": "The brim is the line. Touch it, and it tips.",
+        "simpler": "Water below the line just sits there, leaking. Only the brim makes a tip."
+      },
+      "id": "c5"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "4 is left and the brim is 10. Did it tip?",
+        "answer": false,
+        "why": "4 is under 10, so no tip.",
+        "simpler": "Compare the water with the brim. Smaller means it stays."
+      },
+      "id": "c6"
+    }
+  ],
+  "recall": {
+    "question": "A bucket tips when the water reaches what?",
+    "answer": "The brim."
+  },
+  "deeper": {
+    "note": "The bucket is the leaky integrate-and-fire neuron. Lapicque drew it as a capacitor and a leak in 1907. Abbott tells that story in two pages.",
+    "paper": {
+      "title": "Lapicque's introduction of the integrate-and-fire model neuron (1907)",
+      "authors": [
+        "L. F. Abbott"
+      ],
+      "year": 1999,
+      "venue": "Brain Research Bulletin",
+      "section": "The whole note. It is the RC circuit and why a threshold-and-reset is enough.",
+      "link": "https://doi.org/10.1016/S0361-9230(99)00161-6"
+    }
+  },
+  "bonus": {
+    "kind": "boolean",
+    "prompt": "Water is 9, brim is 10. You pour 4 and the hole takes 2. Does it tip?",
+    "answer": true,
+    "why": "9 + 4 − 2 = 11, and 11 is over 10.",
+    "simpler": "Add the pour, then subtract the hole, then look at the brim."
+  },
+  "terms": [
+    {
+      "plain": "the water line",
+      "term": "membrane potential",
+      "definition": "How charged the neuron is. In the bucket picture, it is the water level."
+    },
+    {
+      "plain": "the hole",
+      "term": "leak",
+      "definition": "Charge that drains over time, so an old input fades if nothing new arrives."
+    }
+  ]
+}

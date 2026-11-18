@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 2,
+  "slug": "reward-stdp",
+  "course": "snn",
+  "unit": "plasticity",
+  "concept": "r-stdp",
+  "title": "A third factor",
+  "summary": "The spike pair only writes a fading note. A later reward decides whether the note becomes a real change.",
+  "terms": [
+    {
+      "plain": "STDP gated by a reward",
+      "term": "reward-modulated STDP",
+      "definition": "A spike pair does not change the weight by itself. A third signal, often a reward, decides whether the eligible pair is applied."
+    },
+    {
+      "plain": "a broadcast teaching signal",
+      "term": "dopamine",
+      "definition": "A neuromodulator that can arrive after the spikes. In these models it cashes the eligibility traces that are still alive."
+    },
+    {
+      "plain": "pre, post, and a modulator",
+      "term": "three-factor learning",
+      "definition": "A rule with two spike factors plus a third, slower signal such as reward or dopamine."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Ordinary STDP pays the synapse at the moment of the two spikes.\nA reward often arrives later, when those spikes are already over.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The pair writes a fading note, an eligibility trace.\nDopamine, or another third factor, later cashes the notes that are still alive.",
+      "id": "c2"
+    },
+    {
+      "kind": "numbers",
+      "lead": "The note dies in 2 seconds.",
+      "lines": [
+        "Reward at 1 second: the note is still there, and the weight changes.",
+        "Reward at 5 seconds: the note is gone. Nothing changes."
+      ],
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A reward that arrives after the eligibility trace has faded still teaches that pair.",
+        "answer": false,
+        "why": "No overlap between the note and the reward means no change.",
+        "simpler": "The third factor has to arrive while the trace is alive."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "How many factors does this rule use?",
+        "choices": [
+          "Two: pre and post",
+          "Three: pre, post, and a modulator",
+          "One: the reward alone"
+        ],
+        "answer": 1,
+        "why": "The spikes decide who was eligible. The modulator decides whether to apply it.",
+        "simpler": "Reward alone would change every synapse. The traces pick which ones."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What does the third factor do in reward-modulated STDP?",
+    "answer": "It decides whether a recent spike pair actually changes the weight."
+  },
+  "deeper": {
+    "note": "Izhikevich linked STDP to dopamine with an eligibility trace, so a reward that arrives late can still credit the right synapses. The signal can be broadcast. The trace is what makes it specific.",
+    "paper": {
+      "title": "Solving the distal reward problem through linkage of STDP and dopamine signaling",
+      "authors": [
+        "Eugene M. Izhikevich"
+      ],
+      "year": 2007,
+      "venue": "Cerebral Cortex",
+      "section": "The eligibility trace and Figure 1.",
+      "link": "https://doi.org/10.1093/cercor/bhl152"
+    }
+  },
+  "bonus": null,
+  "order": 16,
+  "id": "016"
+}

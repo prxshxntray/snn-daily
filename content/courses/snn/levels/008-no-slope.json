@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "id": "008",
+  "slug": "no-slope",
+  "course": "snn",
+  "unit": "credit",
+  "order": 8,
+  "title": "Spikes have no slope",
+  "concept": "no-slope",
+  "summary": "Below threshold the output is 0. Above it, 1. A step has no slope to learn from.",
+  "terms": [
+    {
+      "plain": "the on/off spike function",
+      "term": "Heaviside step",
+      "definition": "A function that is 0 below threshold and 1 above it. A spike, as a function of voltage, is this step."
+    },
+    {
+      "plain": "no slope to follow",
+      "term": "zero derivative",
+      "definition": "Away from the threshold the step is flat, so the derivative is 0. There is no local slope that says how to change the voltage."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Below the threshold the output is 0.\nAbove it the output is 1.\nThere is no in-between.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Threshold 5. Water at 3.",
+      "lines": [
+        "Nudge the water to 3.1.",
+        "The output stays 0.",
+        "The slope you can measure is 0."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Learning needs a slope: if the water changes a little, does the output change?\nA step says no, almost everywhere.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A neuron sitting below threshold gives a nonzero slope for learning.",
+        "answer": false,
+        "why": "The output is flat there. The slope is zero, so the usual lesson cannot move.",
+        "simpler": "Only exactly at the threshold is the step not flat, and that single point is not a usable slope."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Why can’t you learn through a literal spike the usual way?",
+    "answer": "The spike is a step. Its slope is zero almost everywhere."
+  },
+  "deeper": {
+    "note": "Neftci, Mostafa, and Zenke open with this obstacle. Sections II and III separate the missing slope from the other training problems.",
+    "paper": {
+      "title": "Surrogate Gradient Learning in Spiking Neural Networks",
+      "authors": [
+        "Emre O. Neftci",
+        "Hesham Mostafa",
+        "Friedemann Zenke"
+      ],
+      "year": 2019,
+      "venue": "IEEE Signal Processing Magazine",
+      "section": "Sections II and III. The derivative of the spike is the wall.",
+      "link": "https://doi.org/10.1109/MSP.2019.2931595"
+    }
+  },
+  "bonus": null
+}

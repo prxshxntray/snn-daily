@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "id": "010",
+  "slug": "two-layers",
+  "course": "snn",
+  "unit": "layers",
+  "order": 10,
+  "title": "Two layers",
+  "concept": "layers",
+  "summary": "A tip in front is the pour for the bucket behind it.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Put a second row of buckets behind the first.\nThe back row cannot see the original pour.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "It only feels tips.\nWhen a front bucket tips, that tip is a pour into the next layer.",
+      "id": "c2"
+    },
+    {
+      "kind": "numbers",
+      "lead": "The front bucket tips at moment 1 and moment 3.",
+      "lines": [
+        "The back bucket gets a pour at moment 1.",
+        "Nothing arrives at moment 2.",
+        "Another pour arrives at moment 3."
+      ],
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What does layer 2 receive?",
+        "choices": [
+          "Tips from layer 1",
+          "The original pour, unchanged",
+          "The leak of layer 1"
+        ],
+        "answer": 0,
+        "why": "Only spikes cross. The water level stays in its own bucket.",
+        "simpler": "A quiet front bucket sends nothing backward."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "If the front bucket never tips, the back bucket gets no pour from it.",
+        "answer": true,
+        "why": "No tip, no message, no pour.",
+        "simpler": "Layers talk in tips, not in water levels."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What is passed from one layer to the next?",
+    "answer": "Spikes. A tip in front pours into the next layer."
+  },
+  "deeper": {
+    "note": "A feedforward spiking net is just this stack. snnTorch tutorial 3 wires two leaky layers so the first layer’s spikes are the next layer’s input.",
+    "paper": {
+      "title": "Training Spiking Neural Networks Using Lessons From Deep Learning",
+      "authors": [
+        "Jason K. Eshraghian",
+        "Max Ward",
+        "Emre Neftci",
+        "Xinxin Wang",
+        "Gregor Lenz",
+        "Girish Dwivedi",
+        "Mohammed Bennamoun",
+        "Doo Seok Jeong",
+        "Wei D. Lu"
+      ],
+      "year": 2023,
+      "venue": "Proceedings of the IEEE",
+      "section": "The feedforward section. Companion: https://snntorch.readthedocs.io/en/latest/tutorials/tutorial_3.html",
+      "link": "https://doi.org/10.1109/JPROC.2023.3308088"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a tip passed backward",
+      "term": "feedforward spike",
+      "definition": "The only message one layer sends the next. The voltage stays local. The spike travels."
+    }
+  ]
+}

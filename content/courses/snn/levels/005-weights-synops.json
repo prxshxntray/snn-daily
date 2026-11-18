@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "id": "005",
+  "slug": "weights-synops",
+  "course": "snn",
+  "unit": "cost",
+  "order": 5,
+  "title": "Weights and SynOps",
+  "concept": "synop",
+  "summary": "A spike pushes the next neuron only as hard as the weight. Each crossing is one SynOp.",
+  "terms": [
+    {
+      "plain": "how hard a spike pushes",
+      "term": "synaptic weight",
+      "definition": "The strength of one connection. A spike is multiplied by this before it reaches the next neuron."
+    },
+    {
+      "plain": "one spike crossing one synapse",
+      "term": "SynOp",
+      "definition": "A synaptic operation: the work of delivering one spike through one weighted connection."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A spike does not push every neighbor the same way.\nThe link has a strength.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "One tip, different links.",
+      "lines": [
+        "Weight 2: the next neuron receives 2.",
+        "Weight 0: the tip arrives and does nothing.",
+        "Weight 3: the next neuron receives 3."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Each time one spike crosses one link, that is one synaptic operation.\nThe short name is SynOp.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Weight 3. One spike arrives. How much is added next door?",
+        "choices": [
+          0,
+          1,
+          3
+        ],
+        "answer": 3,
+        "why": "The spike is scaled by the weight. 1 × 3 = 3.",
+        "simpler": "The spike is the event. The weight is how large that event is for this link."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "4 spikes each cross 5 links. How many SynOps?",
+        "choices": [
+          4,
+          9,
+          20
+        ],
+        "answer": 20,
+        "why": "Each spike meets each link once. 4 × 5 = 20.",
+        "simpler": "Count spike-link crossings, not spikes alone."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What is one SynOp?",
+    "answer": "One spike delivered through one synapse."
+  },
+  "deeper": {
+    "note": "Operation counts are how SNN papers compare work to a dense network. A MAC is the dense multiply. A SynOp is the spike-driven counterpart. Roy, Jaiswal, and Panda separate those costs in their 2019 perspective.",
+    "paper": {
+      "title": "Towards spike-based machine intelligence with neuromorphic computing",
+      "authors": [
+        "Kaushik Roy",
+        "Akhilesh Jaiswal",
+        "Priyadarshini Panda"
+      ],
+      "year": 2019,
+      "venue": "Nature",
+      "section": "The sections that separate synaptic operations from dense multiplies.",
+      "link": "https://doi.org/10.1038/s41586-019-1677-2"
+    }
+  },
+  "bonus": null
+}

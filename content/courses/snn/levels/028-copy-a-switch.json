@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "id": "028",
+  "slug": "copy-a-switch",
+  "course": "snn",
+  "unit": "practice",
+  "order": 28,
+  "title": "Copy a switch",
+  "concept": "conversion",
+  "summary": "A light that is halfway on becomes a bucket that tips about half the time.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Train an ordinary on-or-off unit first.\nThen let a bucket’s tipping rate stand in for that brightness.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "A unit sitting at halfway.",
+      "lines": [
+        "Halfway on.",
+        "In 10 moments the bucket should tip about 5 times.",
+        "Off stays silent."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "The copied brightness is 0.2. In 10 moments, about how many tips?",
+        "choices": [
+          0,
+          2,
+          8
+        ],
+        "answer": 2,
+        "why": "0.2 of 10 is 2.",
+        "simpler": "Multiply the brightness by the number of moments."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "You need many moments before the count is a fair copy.",
+        "answer": true,
+        "why": "A short window is a noisy guess at the rate.",
+        "simpler": "The copy is an average, not the first moment."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "A unit that is off should make the bucket do what?",
+    "answer": "Stay silent."
+  },
+  "deeper": {
+    "note": "Diehl and colleagues scaled weights so the buckets did not tip every single moment and saturate. ReLU, which can be truly off, is the natural source.",
+    "paper": {
+      "title": "Fast-classifying, high-accuracy spiking deep networks through weight and threshold balancing",
+      "authors": [
+        "Peter U. Diehl",
+        "Daniel Neil",
+        "Jonathan Binas",
+        "Matthew Cook",
+        "Shih-Chii Liu",
+        "Michael Pfeiffer"
+      ],
+      "year": 2015,
+      "venue": "International Joint Conference on Neural Networks",
+      "section": "The weight and threshold balancing method.",
+      "link": "https://doi.org/10.1109/IJCNN.2015.7280696"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a rate standing in for a ReLU",
+      "term": "ANN-to-SNN conversion",
+      "definition": "Turn a trained non-spiking network into a spiking one by matching activations with firing rates."
+    }
+  ]
+}

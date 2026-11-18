@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "courseId": "snn",
+  "startDateOverride": "2026-11-17",
+  "readAheadAll": false,
+  "readAheadIds": [],
+  "muted": false,
+  "xp": 220,
+  "concepts": {
+    "leak": {
+      "ease": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "due": "2026-11-17",
+      "lapses": 0,
+      "levelId": "001",
+      "cardId": "c5",
+      "correct": 2,
+      "total": 2,
+      "fast": 2
+    },
+    "delta": {
+      "ease": 1.96,
+      "interval": 1,
+      "repetitions": 1,
+      "due": "2026-11-18",
+      "lapses": 1,
+      "levelId": "004",
+      "cardId": "c4",
+      "correct": 1,
+      "total": 2,
+      "fast": 0
+    }
+  },
+  "levelClears": {
+    "001": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "002": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "003": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "004": { "on": "2026-11-17", "correct": 1, "total": 2 },
+    "005": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "006": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "007": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "008": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "009": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "010": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "011": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "012": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "013": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "014": { "on": "2026-11-17", "correct": 2, "total": 2 },
+    "015": { "on": "2026-11-17", "correct": 2, "total": 2 }
+  },
+  "activity": {
+    "2026-11-17": { "xp": 220, "attempted": 32, "correct": 31 }
+  },
+  "installHintDismissed": true,
+  "resume": { "levelId": "016", "cardIndex": 2 }
+}

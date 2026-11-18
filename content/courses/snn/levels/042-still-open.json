@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "id": "042",
+  "slug": "still-open",
+  "course": "snn",
+  "unit": "shapes",
+  "order": 42,
+  "title": "Still open",
+  "concept": "open",
+  "summary": "Some 2019 headaches moved. The important ones are still open.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Teaching deep stacks got ordinary.\nFair energy numbers did not.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "A local rule with the reach of the full diary\nis still not on the shelf.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Which problem is still wide open?",
+        "choices": [
+          "A local rule as powerful as the full diary",
+          "Writing one leaky step",
+          "Naming sodium"
+        ],
+        "answer": 0,
+        "why": "Local and powerful have not been shown to be the same tool.",
+        "simpler": "Tavanaei’s 2019 list is a map. Annotate what later levels moved. Do not pretend the review predicted them."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A 100× energy claim is ready to repeat if it names no baseline.",
+        "answer": false,
+        "why": "Name the task, the accuracy, and both machines.",
+        "simpler": "A ratio with no baseline is not yours to carry."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Is a local learning rule as powerful as backpropagation a solved problem?",
+    "answer": "No. It is still open."
+  },
+  "deeper": {
+    "note": "The survey is the map, not a verdict on later papers. The last page of this course is your own annotation of what moved.",
+    "paper": {
+      "title": "Deep learning in spiking neural networks",
+      "authors": [
+        "Amirhossein Tavanaei",
+        "Masoud Ghodrati",
+        "Saeed Reza Kheradpisheh",
+        "Timothée Masquelier",
+        "Anthony Maida"
+      ],
+      "year": 2019,
+      "venue": "Neural Networks",
+      "section": "The challenges section. Read it as a 2019 list.",
+      "link": "https://doi.org/10.1016/j.neunet.2018.12.002"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "local, and as strong as backprop",
+      "term": "local credit assignment",
+      "definition": "The open problem of a learning rule that uses only nearby spikes and still trains deep networks as well as backpropagation."
+    }
+  ]
+}

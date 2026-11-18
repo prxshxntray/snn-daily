@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 2,
+  "id": "002",
+  "slug": "resting-level",
+  "course": "snn",
+  "unit": "buckets",
+  "order": 2,
+  "title": "The resting level",
+  "concept": "resting",
+  "summary": "When the pour matches the leak, the water line stays still.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Each moment, half the water leaks out.\nThen you pour a fixed splash back in.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Find the line that does not move.",
+      "lines": [
+        "Water is 4. Half leaks, so 2 leaves.",
+        "You pour 2 back. Still 4.",
+        "Leak equals pour. That still line is the resting level."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Start too low and the pour wins, so the line climbs.\nStart too high and the leak wins, so the line falls.\nBoth walk toward the same rest.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "number",
+        "prompt": "Half leaks out, and you pour 2. Which water level stays perfectly still?",
+        "choices": [
+          2,
+          4,
+          8
+        ],
+        "answer": 4,
+        "why": "Half of 4 is 2, and you pour 2 back. Leak equals pour.",
+        "simpler": "Try each number. The one where the leak and the pour are the same amount does not move."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "If the water is 2, half leaks (1) and you pour 2, the line climbs toward rest.",
+        "answer": true,
+        "why": "1 leaves, 2 comes in, so it rises from 2 toward 4.",
+        "simpler": "Below rest, the pour is bigger than the leak."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "What is the resting level when half leaks and you pour 2 each moment?",
+    "answer": "4. Leak and pour match there."
+  },
+  "deeper": {
+    "note": "In a real cell this still point is the resting potential: leak current balances the steady input. Gerstner’s Neuronal Dynamics, section 1.3, is the slow version.",
+    "paper": {
+      "title": "Neuronal Dynamics",
+      "authors": [
+        "Wulfram Gerstner",
+        "Werner M. Kistler",
+        "Richard Naud",
+        "Liam Paninski"
+      ],
+      "year": 2014,
+      "venue": "Cambridge University Press",
+      "section": "Section 1.3. Rest first, before any threshold.",
+      "link": "https://neuronaldynamics.epfl.ch/online/Ch1.S3.html"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "the still water line",
+      "term": "resting potential",
+      "definition": "The voltage where leak and steady input balance, so the level stops moving."
+    },
+    {
+      "plain": "leak equals pour",
+      "term": "equilibrium",
+      "definition": "The point a system returns to when the flows in and out match."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "id": "snn",
+  "title": "Spiking networks",
+  "tagline": "Spiking networks, one idea at a time.",
+  "dailyGoalXp": 20,
+  "widget": true,
+  "units": [
+    {
+      "id": "buckets",
+      "title": "The neuron",
+      "blurb": "Leak, rest, and how often it fires."
+    },
+    {
+      "id": "signals",
+      "title": "Change",
+      "blurb": "Send a difference, measured from the last value you sent."
+    },
+    {
+      "id": "cost",
+      "title": "The bill",
+      "blurb": "Weights, synaptic operations, and break-even."
+    },
+    {
+      "id": "credit",
+      "title": "Learning",
+      "blurb": "Windows, the missing slope, and the stand-in."
+    },
+    {
+      "id": "layers",
+      "title": "Layers",
+      "blurb": "Spikes are what crosses."
+    },
+    {
+      "id": "timing",
+      "title": "Codes of time",
+      "blurb": "A pause, a count, or the first spike."
+    },
+    {
+      "id": "plasticity",
+      "title": "Plasticity",
+      "blurb": "Order, a fading window, and a third factor."
+    },
+    {
+      "id": "steps",
+      "title": "One step",
+      "blurb": "Name the leftover, then add an input."
+    },
+    {
+      "id": "moods",
+      "title": "Richer neurons",
+      "blurb": "Bursts, and the ion story."
+    },
+    {
+      "id": "codes",
+      "title": "Codes",
+      "blurb": "A crowd of neurons, and silence used on purpose."
+    },
+    {
+      "id": "links",
+      "title": "Synapses",
+      "blurb": "Competition, and rules that need a third spike."
+    },
+    {
+      "id": "practice",
+      "title": "Training",
+      "blurb": "Dead units, the diary, and conversion."
+    },
+    {
+      "id": "ponds",
+      "title": "Reservoirs",
+      "blurb": "A pool you do not train, and a slower threshold."
+    },
+    {
+      "id": "machines",
+      "title": "Machines",
+      "blurb": "Events, packets, and chips from the literature."
+    },
+    {
+      "id": "shapes",
+      "title": "Frontiers",
+      "blurb": "Residuals, attention, and what is still open."
+    }
+  ]
+}

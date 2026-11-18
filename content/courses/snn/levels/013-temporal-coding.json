@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "slug": "temporal-coding",
+  "course": "snn",
+  "unit": "timing",
+  "concept": "temporal-code",
+  "title": "Time to first spike",
+  "summary": "The message can be when the first spike happens, not how many follow.",
+  "terms": [
+    {
+      "plain": "meaning carried by when",
+      "term": "temporal coding",
+      "definition": "A code in which the times of spikes, not only their count, carry the signal."
+    },
+    {
+      "plain": "the clock time of the first spike",
+      "term": "time-to-first-spike coding",
+      "definition": "Also called latency coding. A stronger input makes the first spike earlier."
+    },
+    {
+      "plain": "unwanted scatter in that time",
+      "term": "jitter",
+      "definition": "Random variation in spike time. Too much jitter washes a latency code out."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A strong input can fire the first spike early.\nA weak input fires it late. The count may be one either way.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Two neurons, one spike each.",
+      "lines": [
+        "The strong input spikes at 4 ms.",
+        "The weak input spikes at 15 ms.",
+        "Earlier means stronger."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "In time-to-first-spike coding, which input was stronger?",
+        "choices": [
+          "The spike at 4 ms",
+          "The spike at 15 ms",
+          "Whichever neuron spiked twice"
+        ],
+        "answer": 0,
+        "why": "Latency coding reads the clock. Sooner is stronger.",
+        "simpler": "Ignore the count. Compare the first-spike times."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Large jitter makes a latency code easier to read.",
+        "answer": false,
+        "why": "Jitter scrambles the time that was supposed to carry the message.",
+        "simpler": "A latency code needs the first spike to land near the time you meant."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "In latency coding, does a stronger input spike earlier or later?",
+    "answer": "Earlier."
+  },
+  "deeper": {
+    "note": "Thorpe, Fize, and Marlot timed human visual categorization and argued the first spikes have to carry a lot, because a long count does not fit in the time available.",
+    "paper": {
+      "title": "Speed of processing in the human visual system",
+      "authors": [
+        "Simon Thorpe",
+        "Denis Fize",
+        "Catherine Marlot"
+      ],
+      "year": 1996,
+      "venue": "Nature",
+      "section": "The timing constraint on visual codes.",
+      "link": "https://doi.org/10.1038/381520a0"
+    }
+  },
+  "bonus": null,
+  "order": 13,
+  "id": "013"
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "id": "039",
+  "slug": "no-average",
+  "course": "snn",
+  "unit": "shapes",
+  "order": 39,
+  "title": "No fancy average",
+  "concept": "spikformer",
+  "summary": "Attention can be “who tipped together,” without a fancy normalization.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "Ordinary attention builds a dense table of scores\nand then does a fancy average.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Spikformer lets the queries, keys, and values be tips,\nand drops that average.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What did they remove from attention?",
+        "choices": [
+          "The fancy normalization",
+          "The tips",
+          "The idea of looking"
+        ],
+        "answer": 0,
+        "why": "The softmax is the clearest non-tip in ordinary attention.",
+        "simpler": "The reported ImageNet number, 74.81%, belongs with 4 moments and about 66 million parameters."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Four moments is a long rate window.",
+        "answer": false,
+        "why": "Four is too short to be a settled copy of a brightness.",
+        "simpler": "This is a directly taught spiking attention, not the slow copy."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Are Spikformer’s queries ordinary real numbers?",
+    "answer": "No. They are spikes."
+  },
+  "deeper": {
+    "note": "Zhou and colleagues, ICLR 2023. After you drop the average, still ask whether the lookup table is a dense block. The next level pushes on that.",
+    "paper": {
+      "title": "Spikformer: When Spiking Neural Network Meets Transformer",
+      "authors": [
+        "Zhaokun Zhou",
+        "Yuesheng Zhu",
+        "Chao He",
+        "Yaowei Wang",
+        "Shuicheng Yan",
+        "Yonghong Tian",
+        "Li Yuan"
+      ],
+      "year": 2023,
+      "venue": "International Conference on Learning Representations",
+      "section": "Figure 1 and spiking self-attention. The ImageNet number is a result, with 4 timesteps.",
+      "link": "https://arxiv.org/abs/2209.15425"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "attention without the fancy average",
+      "term": "spiking self-attention",
+      "definition": "An attention block whose queries, keys, and values are spikes and which drops softmax."
+    }
+  ]
+}

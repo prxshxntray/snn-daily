@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "id": "021",
+  "slug": "a-crowd",
+  "course": "snn",
+  "unit": "codes",
+  "order": 21,
+  "title": "A crowd of buckets",
+  "concept": "population",
+  "summary": "One bucket is vague. The crowd’s vote can be sharp.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "One bucket likes many directions.\nIts water level alone is not a compass.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Each bucket votes for its favorite direction,\nas hard as it is currently tipping.",
+      "id": "c2"
+    },
+    {
+      "kind": "numbers",
+      "lead": "Two votes, equal and strong.",
+      "lines": [
+        "One votes left.",
+        "One votes up.",
+        "Together they point up-left."
+      ],
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "Equal votes for left and for up point which way?",
+        "choices": [
+          "Up-left",
+          "Only left",
+          "Nowhere"
+        ],
+        "answer": 0,
+        "why": "Equal pulls land on the diagonal.",
+        "simpler": "Add the two directions. Do not pick a winner."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "One broadly tuned bucket, or the crowd: which one carries the direction?",
+    "answer": "The crowd."
+  },
+  "deeper": {
+    "note": "Georgopoulos, Schwartz, and Kettner watched motor cortex do this. The population vector is the vote.",
+    "paper": {
+      "title": "Neuronal population coding of movement direction",
+      "authors": [
+        "Apostolos P. Georgopoulos",
+        "Andrew B. Schwartz",
+        "Ronald E. Kettner"
+      ],
+      "year": 1986,
+      "venue": "Science",
+      "section": "The vector hypothesis and the figure beside the movement.",
+      "link": "https://doi.org/10.1126/science.3749885"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "many vague votes",
+      "term": "population code",
+      "definition": "A representation carried by the pattern across neurons, not by any single one."
+    }
+  ]
+}

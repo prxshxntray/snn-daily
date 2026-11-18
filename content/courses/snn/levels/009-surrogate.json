@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "009",
+  "slug": "surrogate",
+  "course": "snn",
+  "unit": "credit",
+  "order": 9,
+  "title": "Surrogate gradients",
+  "concept": "surrogate",
+  "summary": "While learning, pretend the step has a gentle slope. The spikes you see stay sharp.",
+  "terms": [
+    {
+      "plain": "a pretend slope used only while learning",
+      "term": "surrogate gradient",
+      "definition": "A smooth stand-in for the missing slope of the spike. It is used on the backward pass and thrown away at test time."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "While learning, pretend the step is a gentle hill near the threshold.\nA neuron that is close can still get a hint.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The spikes you actually see stay sharp.\nThe pretend slope is only for the lesson.\nWhen learning is over, it is gone.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "When is the surrogate gradient used?",
+        "choices": [
+          "Only while learning",
+          "Whenever the neuron spikes for real",
+          "Instead of having a threshold"
+        ],
+        "answer": 0,
+        "why": "Forward spikes stay all-or-nothing. The stand-in slope is backward only.",
+        "simpler": "If you still see a soft spike at test time, that is a different model."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A wider pretend slope can teach a neuron that never quite reached threshold.",
+        "answer": true,
+        "why": "The hint reaches voltages near the step, not only the single point on it.",
+        "simpler": "Wider is more generous and less exact."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Does a surrogate gradient change the spikes you see?",
+    "answer": "No. It only stands in for the slope while learning."
+  },
+  "deeper": {
+    "note": "Section IV-B of the same review is the construction. snnTorch’s default stand-in, if you pass nothing, is the arctangent. fast_sigmoid is the opt-in.",
+    "paper": {
+      "title": "Surrogate Gradient Learning in Spiking Neural Networks",
+      "authors": [
+        "Emre O. Neftci",
+        "Hesham Mostafa",
+        "Friedemann Zenke"
+      ],
+      "year": 2019,
+      "venue": "IEEE Signal Processing Magazine",
+      "section": "Section IV-B. arXiv: https://arxiv.org/abs/1901.09948",
+      "link": "https://arxiv.org/abs/1901.09948"
+    }
+  },
+  "bonus": null
+}

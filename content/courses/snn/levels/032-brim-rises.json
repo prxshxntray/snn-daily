@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "id": "032",
+  "slug": "brim-rises",
+  "course": "snn",
+  "unit": "ponds",
+  "order": 32,
+  "title": "A brim that rises",
+  "concept": "adaptive",
+  "summary": "After a tip, lift the brim for a while. That lift outlasts the leak.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "The water forgets quickly.\nA brim that jumps up after a tip, then sinks slowly, remembers longer.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The tips write that slow memory themselves.\nYou can teach the wires with the diary from earlier.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "A bucket whose only memory is a fast leak can hold a one-second pause.",
+        "answer": false,
+        "why": "The leak is gone long before the second is up.",
+        "simpler": "You need a slower dial than the hole."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "What writes the slow memory here?",
+        "choices": [
+          "The bucket’s own tips",
+          "An outside notebook with no tips",
+          "The reader alone"
+        ],
+        "answer": 0,
+        "why": "Each tip lifts the brim. The lift fades on its own clock.",
+        "simpler": "This is not the frozen pond. These wires are taught."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Why can a rising brim remember longer than the leak?",
+    "answer": "It is a second, slower state written by the tips."
+  },
+  "deeper": {
+    "note": "Bellec and colleagues trained recurrent spiking nets with that adaptive brim. The paper’s second half is learning-to-learn. The brim is enough for today. In snnTorch the recurrent bucket is RLeaky. The rising brim is extra.",
+    "paper": {
+      "title": "Long short-term memory and learning-to-learn in networks of spiking neurons",
+      "authors": [
+        "Guillaume Bellec",
+        "Darjan Salaj",
+        "Anand Subramoney",
+        "Robert Legenstein",
+        "Wolfgang Maass"
+      ],
+      "year": 2018,
+      "venue": "Advances in Neural Information Processing Systems",
+      "section": "The adaptive neuron and the memory tasks.",
+      "link": "https://arxiv.org/abs/1803.09574"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "the threshold lifts after a spike",
+      "term": "adaptive threshold",
+      "definition": "A slow state that raises the firing threshold after each spike, giving memory longer than the membrane leak."
+    }
+  ]
+}

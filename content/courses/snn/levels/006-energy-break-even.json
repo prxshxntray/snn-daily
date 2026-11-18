@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "id": "006",
+  "slug": "energy-break-even",
+  "course": "snn",
+  "unit": "cost",
+  "order": 6,
+  "title": "The energy break-even",
+  "concept": "break-even",
+  "summary": "A spiking net does less work only when spikes are rare enough.",
+  "terms": [
+    {
+      "plain": "a multiply plus an add",
+      "term": "MAC",
+      "definition": "Multiply-accumulate. The usual cost of one connection in a non-spiking network, paid whether or not the unit was active."
+    },
+    {
+      "plain": "when spike work equals dense work",
+      "term": "energy break-even",
+      "definition": "The activity level where SynOps cost the same as the MACs they replace. Below it, spikes save work. Above it, they do not."
+    }
+  ],
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A regular network multiplies every connection,\neven when that unit was silent.",
+      "id": "c1"
+    },
+    {
+      "kind": "numbers",
+      "lead": "100 connections.",
+      "lines": [
+        "The regular network does 100 MACs.",
+        "If 2 spikes arrive, the spiking network does about 2 SynOps.",
+        "2 is far below 100."
+      ],
+      "id": "c2"
+    },
+    {
+      "kind": "say",
+      "text": "Break-even is the activity where the SynOps cost the same as those MACs.\nRarer than that, spikes win. Busier than that, they do not.",
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "100 connections, 2 spikes. Who does less work?",
+        "choices": [
+          "The spiking network",
+          "The regular network",
+          "They match"
+        ],
+        "answer": 0,
+        "why": "2 SynOps against 100 MACs. The spikes are well below break-even.",
+        "simpler": "Compare the number of spike crossings with the number of connections."
+      },
+      "id": "c4"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "If every neuron spikes on every step, the spiking network still does less work.",
+        "answer": false,
+        "why": "Then you pay a SynOp on every connection, and the addressing of spikes on top.",
+        "simpler": "Sparsity is the whole saving. A dense rate spends it."
+      },
+      "id": "c5"
+    }
+  ],
+  "recall": {
+    "question": "When does a spiking network do less work than a dense one?",
+    "answer": "When spikes are rare enough to sit below the break-even."
+  },
+  "deeper": {
+    "note": "This is an operation-count argument, not a measurement on a particular machine. The 2019 Nature perspective is the checklist for when the argument is real.",
+    "paper": {
+      "title": "Towards spike-based machine intelligence with neuromorphic computing",
+      "authors": [
+        "Kaushik Roy",
+        "Akhilesh Jaiswal",
+        "Priyadarshini Panda"
+      ],
+      "year": 2019,
+      "venue": "Nature",
+      "section": "Read the comparison of encoding, algorithm, and hardware as three separate claims.",
+      "link": "https://doi.org/10.1038/s41586-019-1677-2"
+    }
+  },
+  "bonus": null
+}

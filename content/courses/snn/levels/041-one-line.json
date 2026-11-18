@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "id": "041",
+  "slug": "one-line",
+  "course": "snn",
+  "unit": "shapes",
+  "order": 41,
+  "title": "One line at a time",
+  "concept": "spikegpt",
+  "summary": "Keep a running note and update it each word, instead of rereading the whole page.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A long page makes a full attention table enormous.\nA running note updates one word at a time.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "Tips fit a note that changes when something arrives\nand otherwise sits still.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "SpikeGPT’s mixer is closest to…",
+        "choices": [
+          "a running note, one word at a time",
+          "a full table of every word against every other",
+          "a frozen pond with no reader"
+        ],
+        "answer": 0,
+        "why": "The parent idea is a linear recurrent mixer, RWKV.",
+        "simpler": "The claim is that this can be trained with spiking units, not that it matches the largest language models."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "Each new word allocates a fresh row of scores against every earlier word.",
+        "answer": false,
+        "why": "The note updates. It does not rebuild the table.",
+        "simpler": "That is the linear cost."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "Why is a running note a better fit for tips than a full attention table?",
+    "answer": "It updates when an event arrives and can stay quiet otherwise."
+  },
+  "deeper": {
+    "note": "Zhu, Zhao, Li, and Eshraghian. The preprint is the citation. It was later presented at ICLR 2025. Read how the spiking unit replaces the usual activation inside that recurrence.",
+    "paper": {
+      "title": "SpikeGPT: Generative Pre-trained Language Model with Spiking Neural Networks",
+      "authors": [
+        "Rui-Jie Zhu",
+        "Qihang Zhao",
+        "Guoqi Li",
+        "Jason K. Eshraghian"
+      ],
+      "year": 2023,
+      "venue": "arXiv preprint, later ICLR 2025",
+      "section": "The recurrent mixer and what the spike replaces.",
+      "link": "https://arxiv.org/abs/2302.13939"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "a running note, one token at a time",
+      "term": "linear recurrent mixer",
+      "definition": "A sequence block whose state updates per token, instead of building a token-by-token attention matrix."
+    }
+  ]
+}

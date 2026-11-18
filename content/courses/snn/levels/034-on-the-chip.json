@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "id": "034",
+  "slug": "on-the-chip",
+  "course": "snn",
+  "unit": "machines",
+  "order": 34,
+  "title": "Learning beside the bucket",
+  "concept": "loihi",
+  "summary": "The link can change next to the bucket, without a round trip.",
+  "cards": [
+    {
+      "kind": "say",
+      "text": "A tip is a small packet to another core.\nIt is not a number written in one giant notebook.",
+      "id": "c1"
+    },
+    {
+      "kind": "say",
+      "text": "The unusual part is a learning rule that runs beside the link,\non the chip.",
+      "id": "c2"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "choice",
+        "prompt": "A diary read backward on a graphics chip is already this machine.",
+        "choices": [
+          "No. The lesson has to be local.",
+          "Yes. Any spike is enough.",
+          "Only if the bucket leaks."
+        ],
+        "answer": 0,
+        "why": "Backprop’s diary is a different machine.",
+        "simpler": "Local rule, local packets. That is the fit."
+      },
+      "id": "c3"
+    },
+    {
+      "kind": "ask",
+      "question": {
+        "kind": "boolean",
+        "prompt": "The 2018 paper’s energy story is about a specific sparse solver, not about every network.",
+        "answer": true,
+        "why": "Quote the task that was measured.",
+        "simpler": "It is an existence proof, not a ranking of all models."
+      },
+      "id": "c4"
+    }
+  ],
+  "recall": {
+    "question": "What does Loihi put next to the synapses that a pure inference chip can skip?",
+    "answer": "A programmable local learning rule."
+  },
+  "deeper": {
+    "note": "Davies and colleagues, IEEE Micro 2018. 128 neuromorphic cores. Do not cite this paper as a description of the later Loihi 2 chip.",
+    "paper": {
+      "title": "Loihi: A Neuromorphic Manycore Processor with On-Chip Learning",
+      "authors": [
+        "Mike Davies",
+        "Narayan Srinivasa",
+        "Tsung-Han Lin",
+        "Gautham Chinya",
+        "Yongqiang Cao",
+        "Sri Harsha Choday",
+        "Georgios Dimou",
+        "Prasad Joshi",
+        "Nabil Imam",
+        "Shweta Jain",
+        "Yuyun Liao",
+        "Chit-Kwan Lin",
+        "Andrew Lines",
+        "Ruokun Liu",
+        "Deepak Mathaikutty",
+        "Steven McCoy",
+        "Arnab Paul",
+        "Jonathan Tse",
+        "Guruguhanathan Venkataramanan",
+        "Yi-Hsin Weng",
+        "Andreas Wild",
+        "Yoonseok Yang",
+        "Hong Wang"
+      ],
+      "year": 2018,
+      "venue": "IEEE Micro",
+      "section": "The core, the mesh, the learning engine, and what the energy comparison actually measured.",
+      "link": "https://doi.org/10.1109/MM.2018.112130359"
+    }
+  },
+  "bonus": null,
+  "terms": [
+    {
+      "plain": "learning next to the synapse",
+      "term": "on-chip learning",
+      "definition": "A weight update that runs locally on a neuromorphic core, without a host optimizer in the inner loop."
+    }
+  ]
+}
